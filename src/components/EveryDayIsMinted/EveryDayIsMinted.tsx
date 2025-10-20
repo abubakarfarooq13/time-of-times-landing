@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { AntaFont, OutfitFont } from "@/lib/font";
+import { AntaFont, OutfitFont, RubikFont } from "@/lib/font";
 import Image from "next/image";
 
 interface Event {
@@ -102,7 +102,7 @@ export default function EveryDayIsMinted() {
             Once and Forever
           </p>
         </div>
-        <div className="relative">
+        <div className="relative ">
           <button
             onClick={handlePrev}
             className="absolute left-8 top-1/2 -translate-y-1/2 -translate-x-12 sm:-translate-x-16 z-10 p-2 bg-white rounded-full border-1 border-[#FF4F3A] text-[#FF4F3A] other-shadow-2 hover:bg-orange-50 transition-colors"
@@ -116,7 +116,7 @@ export default function EveryDayIsMinted() {
               {visibleEvents.map((event) => (
                 <div
                   key={event.id}
-                  className="flex-1 min-w-0 bg-white other-shadow-2 rounded-3xl p-6 sm:p-8"
+                  className="flex-1 min-w-0 bg-white other-shadow-2 rounded-3xl p-6 sm:p-8 "
                 >
                   <p
                     className={`${event.dateColor} text-[16px]  font-semibold mb-2 text-[#FF4F3A] text-center`}
@@ -186,6 +186,64 @@ export default function EveryDayIsMinted() {
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
+        </div>
+      </div>
+      <div className="flex justify-between items-center mt-[250px] gap-8">
+        <div className="bg-[#FF4F3A] rounded-4xl p-6 relative w-full">
+          <div className="absolute -top-[180px] left-1/2 -translate-x-1/2">
+            <Image
+              src="/everydayisminted/man.png"
+              alt="AI Vision"
+              width={300}
+              height={300}
+            />
+          </div>
+          <div
+            className={`text-center text-white mt-8 font-normal ${AntaFont.className}`}
+          >
+            <span className="text-[24px] ">FOR ARTIST</span>
+            <h2 className="text-[42px] font-normal leading-11 mt-8">
+              Turn
+              <br />
+              Headlines Into Art{" "}
+            </h2>
+            <p
+              className={`${RubikFont.className} text-[16px] font-normal my-4`}
+            >
+              Upload your vision of the day’s event, compete in community
+              voting, and earn <br />
+              rewards. Top artists gain exposure, income, and a place in
+              history.
+            </p>
+          </div>
+        </div>
+        <div className="bg-[#221235] rounded-4xl p-6 relative w-full">
+          <div className="absolute -top-[180px] left-1/2 -translate-x-1/2">
+            <Image
+              src="/everydayisminted/man-2.png"
+              alt="AI Vision"
+              width={300}
+              height={300}
+            />
+          </div>
+          <div
+            className={`text-center text-white mt-8 font-normal ${AntaFont.className}`}
+          >
+            <span className="text-[24px] ">FOR COLLECTOR</span>
+            <h2 className="text-[42px] font-normal leading-11 mt-8">
+              Own a
+              <br />
+              Piece of History
+            </h2>
+            <p
+              className={`${RubikFont.className} text-[16px] font-normal my-4`}
+            >
+              Each NFT is scarce and meaningful. With only 365 per year,
+              collectors secure digital
+              <br /> artifacts with cultural and historical value. Buy, resell,
+              or hold forever.
+            </p>
+          </div>
         </div>
       </div>
     </div>
