@@ -5,9 +5,9 @@ import { RubikFont } from "@/lib/font";
 export default function Footer() {
   return (
     <footer className="bg-[#221235] rounded-4xl text-white mb-10 overflow-hidden flex w-full">
-      <div className=" mx-auto px-4 sm:px-6 lg:px-12 lg:pb-8 pt-12 md:pt-10  w-full">
+      <div className=" lg:mx-auto px-12  lg:px-12 pb-8 pt-10   w-full">
         <div className="flex justify-between gap-8 md:gap-12">
-          <div className="flex flex-col items-start space-y-6">
+          <div className="flex flex-col  items-start space-y-6">
             <div className="flex items-center space-x-2">
               <div className="text-2xl md:text-3xl font-bold tracking-wider">
                 <Image
@@ -97,7 +97,7 @@ export default function Footer() {
           </div>
 
           <div className="hidden md:flex items-center justify-center relative w-[350px] z-0">
-            <div className="absolute -top-30">
+            <div className="absolute lg:-top-30">
               <Image
                 src="/footer/img.png"
                 alt="x"
@@ -109,7 +109,7 @@ export default function Footer() {
           </div>
 
           <div
-            className={`flex flex-col space-y-4 ${RubikFont.className} text-[16px] xl:pr-30`}
+            className={`flex flex-col text-nowrap whitespace-nowrap space-y-4 ${RubikFont.className} text-[16px] xl:pr-30`}
           >
             <nav className="space-y-6">
               <Link

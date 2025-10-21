@@ -56,7 +56,7 @@ const Navbar = () => {
           className={`container mx-auto lg:px-0 transition-all duration-300 ${
             isScrolled
               ? "bg-white rounded-full backdrop-blur-md other-shadow  py-2 !px-4 "
-              : "bg-transparent py-6"
+              : "bg-transparent py-4 lg:py-6"
           }`}
         >
           <div className="flex items-center justify-between">
@@ -122,7 +122,7 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-60 lg:hidden">
           <div
-            className="fixed inset-0 bg-black/50"
+            className="fixed inset-0 bg-black/80"
             onClick={toggleMobileMenu}
           />
           <div className="fixed top-0 right-0 h-full w-80 max-w-sm bg-white shadow-xl">

@@ -7,64 +7,64 @@ const RoadMap = () => {
     {
       month: "September 2025",
       title: "Early Birds Program Start",
-      top: "-top-13",
-      left: "-left-6  xl:left-10",
-      right: "",
+      top: "top-7 lg:-top-13",
+      left: " lg:-left-6  xl:left-10",
+      right: "right-12",
       bottom: "",
     },
     {
       month: "December 2025",
       title: "Platform Kickoff",
-      top: "top-30 xl:top-38",
-      left: "left-16 xl:left-34",
+      top: "top-26 lg:top-30 xl:top-38",
+      left: "left-12 lg:left-16 xl:left-34",
       right: "",
       bottom: "",
     },
     {
       month: "End of January 2026",
       title: "Foundation Phase",
-      top: "-top-13",
-      left: "left-35 xl:left-60",
-      right: "",
+      top: "top-44 lg:-top-13",
+      left: "lg:left-35 xl:left-60",
+      right: "right-14",
       bottom: "",
     },
     {
       month: "End of February 2026",
       title: "AI Development Phase",
-      top: "top-30 xl:top-38",
-      left: "left-53 xl:left-[340px]",
+      top: "top-64 lg:top-30 xl:top-38",
+      left: "left-12 lg:left-53 xl:left-[340px]",
       right: "",
       bottom: "",
     },
     {
       month: "End of March 2026",
       title: "Feature Expansion Phase ",
-      top: "-top-13",
-      left: "left-73 xl:left-[440px]",
-      right: "",
+      top: "top-82 lg:-top-13",
+      left: " lg:left-73 xl:left-[440px]",
+      right: "right-11",
       bottom: "",
     },
     {
       month: "April 2026",
       title: "Testing & Preparations",
-      top: "top-30 xl:top-38",
-      left: "left-93 xl:left-[540px]",
+      top: "top-102 lg:top-30 xl:top-38",
+      left: "left-12 lg:left-93 xl:left-[540px]",
       right: "",
       bottom: "",
     },
     {
       month: "April 30, 2026",
       title: "Official Launch ",
-      top: "-top-13",
-      left: "left-113 xl:left-[645px]",
-      right: "",
+      top: "top-122 lg:-top-13",
+      left: "lg:left-113 xl:left-[645px]",
+      right: "right-25.5",
       bottom: "",
     },
     {
       month: "Future",
       title: "Global Expansion ",
-      top: "top-30 xl:top-38",
-      left: "left-130 xl:left-[750px]",
+      top: "top-140 lg:top-30 xl:top-38",
+      left: "left-12 lg:left-130 xl:left-[750px]",
       right: "",
       bottom: "",
     },
@@ -72,7 +72,7 @@ const RoadMap = () => {
 
   return (
     <div className="mt-10 flex justify-center">
-      <div className="flex w-full items-center bg-[#221235] rounded-4xl justify-between xl:p-6 gap-6 min-h-[300px] overflow-hidden">
+      <div className="flex flex-col lg:flex-row w-full items-center bg-[#221235] rounded-4xl pt-10 lg:pt-0 justify-between xl:p-6 gap-6 min-h-[300px] overflow-hidden">
         <div>
           <h2
             className={`text-5xl xl:text-[56px] text-[#FF4F3A] ${AntaFont.className} ml-10`}
@@ -80,22 +80,22 @@ const RoadMap = () => {
             Roadmap
           </h2>
         </div>
-        <div className="relative pr-10 xl:pr-0 xl:mr-10">
+        <div className="relative pr-10  xl:mr-10">
           {roadmap.map((item, index) => (
             <div
               key={index}
               className={`${RubikFont.className} absolute flex flex-col gap-2 ${item.top} ${item.left} ${item.right} ${item.bottom}`}
             >
-              <h3 className="text-[14px] xl:text-[16px] font-normal text-[#FF4F3A] -mb-1">
+              <h3 className="text-[16px] lg:text-[14px] xl:text-[16px] font-normal text-nowrap whitespace-nowrap text-[#FF4F3A] -mb-1">
                 {item.month}
               </h3>
-              <span className="text-[12px] xl:text-[14px] font-normal text-white">
+              <span className="text-[14px] lg:text-[12px] xl:text-[14px] font-normal text-white">
                 {item.title}
               </span>
             </div>
           ))}
 
-          <RoadmapIcon className="w-[600px] xl:w-[900px] h-full max-h-[150px]" />
+          <RoadmapIcon className="w-[600px] lg:rotate-0 rotate-90  xl:w-[900px] h-[700px] lg:h-full lg:max-h-[150px]" />
         </div>
       </div>
     </div>

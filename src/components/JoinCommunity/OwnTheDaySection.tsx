@@ -6,8 +6,8 @@ import Image from "next/image";
 export function OwnTheDaySection() {
   return (
     <div className="border-2 border-black rounded-4xl p-8 lg:px-10 xl:px-12 overflow-hidden">
-      <div className="flex justify-between gap-8 items-center">
-        <div>
+      <div className="flex flex-col lg:flex-row justify-between gap-8 items-center">
+        <div className="text-center lg:text-start">
           <h2
             className={`text-4xl md:text-[56px] font-normal  mb-4 ${AntaFont.className}`}
           >
@@ -27,7 +27,7 @@ export function OwnTheDaySection() {
             <br className="hidden 2xl:block" /> in history. Each NFT is a living
             record, a piece of time that only one person can truly own.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col justify-center lg:justify-start sm:flex-row gap-4">
             <Button
               variant="default"
               className={`rounded-full max-w-max !px-6 !py-5.5  text-[16px] font-medium ${OutfitFont.className}`}

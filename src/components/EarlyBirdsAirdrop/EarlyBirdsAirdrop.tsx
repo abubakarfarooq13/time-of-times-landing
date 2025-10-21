@@ -39,7 +39,7 @@ const EarlyBirdsAirdrop = () => {
               Follow Time of Times on Telegram and X, complete quests,
               <br className="xl:hidden block" /> post public
               <br className="hidden xl:block" /> mentions, join AMAs, and invite
-              friends. Rewards <br className="xl:hidden block" />
+              friends. Rewards <br className="xl:hidden hidden lg:block" />
               may include $TIMES with
               <br className="hidden xl:block" /> vesting and role badges.
             </p>
@@ -56,7 +56,7 @@ const EarlyBirdsAirdrop = () => {
           </Button>
         </div>
         <div className="flex relative ">
-          <div className="absolute w-[80px] xl:w-[100px] -left-30  2xl:-left-50 top-20">
+          <div className="absolute hidden lg:block w-[80px] xl:w-[100px] -left-30  2xl:-left-50 top-20">
             <Image
               src="/earlybirdsairdrop/b1.png"
               alt=""
@@ -65,7 +65,7 @@ const EarlyBirdsAirdrop = () => {
               quality={100}
             />
           </div>
-          <div className="mr-10 xl:mr-20 w-[200px] xl:w-[250px]">
+          <div className="lg:mr-10 xl:mr-20 w-[200px] xl:w-[250px]">
             <Image
               src="/earlybirdsairdrop/b2.png"
               alt=""

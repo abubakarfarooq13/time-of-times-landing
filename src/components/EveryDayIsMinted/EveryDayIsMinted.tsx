@@ -124,7 +124,7 @@ export default function EveryDayIsMinted() {
                     {event.date}
                   </p>
 
-                  <h2 className="text-xl sm:text-[20px] text-center font-semibold text-[#101010] mb-6 text-balance">
+                  <h2 className="text-sm lg:text-[20px] text-center font-semibold text-[#101010] mb-6 text-balance">
                     {event.title}
                   </h2>
 
@@ -139,7 +139,7 @@ export default function EveryDayIsMinted() {
                           height={400}
                         />
                       </div>
-                      <p className="text-center text-sm sm:text-[20px] bg-[#000000B2] font-medium text-white py-2 rounded-b-[17px]">
+                      <p className="text-center text-sm lg:text-[20px] bg-[#000000B2] font-medium text-white py-2 rounded-b-[17px]">
                         AI Vision
                       </p>
                     </div>
@@ -154,7 +154,7 @@ export default function EveryDayIsMinted() {
                           height={400}
                         />
                       </div>
-                      <p className="text-center text-sm sm:text-[20px] bg-[#000000B2] font-medium text-white py-2 rounded-b-[17px] ">
+                      <p className="text-center text-sm lg:text-[20px] bg-[#000000B2] font-medium text-white py-2 rounded-b-[17px] ">
                         Top Voted Artist
                       </p>
                     </div>
@@ -190,7 +190,7 @@ export default function EveryDayIsMinted() {
       </div>
       <div className="flex justify-between items-center  mt-[200px] xl:mt-[250px] gap-8">
         <div className="bg-[#FF4F3A] rounded-4xl p-6 relative w-full">
-          <div className="absolute -top-[140px] xl:-top-[180px] left-1/2 -translate-x-1/2">
+          <div className="absolute w-[250px] lg:w-auto -top-[150px] lg:-top-[140px] xl:-top-[180px] left-1/2 -translate-x-1/2">
             <Image
               src="/everydayisminted/man.png"
               alt="AI Vision"
@@ -218,7 +218,7 @@ export default function EveryDayIsMinted() {
           </div>
         </div>
         <div className="bg-[#221235] rounded-4xl p-6 relative w-full">
-          <div className="absolute -top-[140px] xl:-top-[180px] left-1/2 -translate-x-1/2">
+          <div className="absolute w-[250px] lg:w-auto -top-[150px] lg:-top-[140px] xl:-top-[180px] left-1/2 -translate-x-1/2">
             <Image
               src="/everydayisminted/man-2.png"
               alt="AI Vision"
