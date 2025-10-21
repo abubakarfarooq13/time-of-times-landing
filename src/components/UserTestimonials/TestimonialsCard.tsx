@@ -28,7 +28,7 @@ export default function TestimonialCard({
               className="object-cover"
             />
           </div>
-          <div className="absolute bottom-2 right-2 text-2xl sm:text-3xl bg-white rounded-full w-8 h-8 sm:w-8 sm:h-8 flex items-center justify-center ">
+          <div className="absolute bottom-2 right-2 text-2xl sm:text-3xl bg-white rounded-full w-8 h-8 sm:w-8 sm:h-8 flex items-center justify-center overflow-hidden">
             <Image
               src={flag || "/placeholder.svg"}
               alt={name}

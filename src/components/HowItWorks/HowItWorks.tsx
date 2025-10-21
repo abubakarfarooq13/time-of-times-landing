@@ -42,19 +42,51 @@ const HowItWorks = () => {
       >
         How it works
       </h1>
-      <div className="flex  h-[500px] ">
-        <div className="relative flex items-center h-full">
-          <div className="h-[800px] w-[800px] absolute -top-50 -left-70 border-r-2 border-[#C0C0C0]   border-dashed rounded-full ">
-            <div className="relative">
+      <div className="flex  h-[500px] w-full ">
+        <div className="relative flex items-center h-full ">
+          <div className="h-[800px] w-[800px] absolute -top-50 -left-60 border-r-2 border-[#C0C0C0]   border-dashed  rounded-full ">
+            <div className="relative h-[800px]">
               <div
-                className={`absolute flex flex-col gap-3  w-[20px] z-20 right-0 top-1/2 ${TomorrowFont.className}`}
+                className={`absolute flex flex-col gap-3  w-[60px] z-20 -right-7 top-[430px] ${TomorrowFont.className}`}
               >
-                {Array.from({ length: 6 }).map((_, index) => (
-                  <div
-                    key={index}
-                    className="bg-[#FF4F3A] text-white rounded-full flex items-center justify-center h-8 w-8 z-20 right-0 "
-                  >{`${index + 1}`}</div>
-                ))}
+                <div className="bg-[#FF4F3A] text-white rounded-full flex items-center justify-center text-[32px] font-medium h-[60px] w-[60px] z-20  ">
+                  1
+                </div>
+              </div>
+              <div
+                className={`absolute flex flex-col gap-3  w-[40px] z-20 -right-0 top-[510px] ${TomorrowFont.className}`}
+              >
+                <div className="bg-[#E5E5E5] font-medium text-black rounded-full flex items-center justify-center text-[16px] h-[40px] w-[40px] z-20  ">
+                  2
+                </div>
+              </div>
+              <div
+                className={`absolute flex flex-col gap-3  w-[40px] z-20 right-5.5 top-[565px] ${TomorrowFont.className}`}
+              >
+                <div className="bg-[#E5E5E5] font-medium text-black rounded-full flex items-center justify-center text-[16px] h-[40px] w-[40px] z-20  ">
+                  3
+                </div>
+              </div>
+              <div
+                className={`absolute flex flex-col gap-3  w-[40px] z-20 right-13.5 top-[615px] ${TomorrowFont.className}`}
+              >
+                <div className="bg-[#E5E5E5] font-medium text-black rounded-full flex items-center justify-center text-[16px] h-[40px] w-[40px] z-20  ">
+                  4
+                </div>
+              </div>
+              <div
+                className={`absolute flex flex-col gap-3  w-[40px] z-20 right-23 top-[660px] ${TomorrowFont.className}`}
+              >
+                <div className="bg-[#E5E5E5] font-medium text-black rounded-full flex items-center justify-center text-[16px] h-[40px] w-[40px] z-20  ">
+                  5
+                </div>
+              </div>
+              <div
+                className={`absolute flex flex-col gap-3  w-[40px] z-20 right-34 top-[700px] ${TomorrowFont.className}`}
+              >
+                <div className="bg-[#E5E5E5] font-medium text-black rounded-full flex items-center justify-center text-[16px] h-[40px] w-[40px] z-20  ">
+                  6
+                </div>
               </div>
             </div>
           </div>
@@ -74,10 +106,12 @@ const HowItWorks = () => {
           ))}
         </div>
 
-        <div>
-          <div className={`flex flex-col ${RubikFont.className}`}>
+        <div className="ml-[380px] mt-[220px]">
+          <div
+            className={`flex flex-col ${TomorrowFont.className} text-[32px] font-medium `}
+          >
             <span>Note of the Day</span>
-            <span>
+            <span className={`${RubikFont.className} text-[19px] font-normal`}>
               AI scans global media and selects the most discussed news.
             </span>
           </div>
