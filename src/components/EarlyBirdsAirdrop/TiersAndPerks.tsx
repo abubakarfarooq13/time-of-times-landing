@@ -4,7 +4,7 @@ import React from "react";
 
 const TiersAndPerks = () => {
   return (
-    <div className="mt-4 flex justify-center">
+    <div className="mt-6 xl:mt-4 flex justify-center">
       <div className="flex justify-between bg-[#BDB8C3] rounded-full px-20 py-6 max-w-7xl w-full">
         <div>
           <h2 className="font-normal text-[56px] leading-14 text-[#221235]">

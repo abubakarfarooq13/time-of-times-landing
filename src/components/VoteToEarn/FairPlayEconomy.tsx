@@ -12,11 +12,11 @@ export function FairPlayEconomy() {
           FAIR PLAY ECONOMY
         </h2>
 
-        <div className="bg-[#221235] rounded-3xl p-6 md:p-8 lg:px-12 lg:py-8">
+        <div className="bg-[#221235] rounded-3xl p-6 lg:px-6 xl:px-12 lg:py-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-6">
             <div className="lg:col-span-1 flex flex-col justify-center">
               <h3
-                className={`text-3xl md:text-[56px] leading-14 font-medium text-[#FF4F3A] mb-4 ${AntaFont.className}`}
+                className={`text-3xl lg:text-5xl xl:text-[56px] leading-14 font-medium text-[#FF4F3A] mb-4 ${AntaFont.className}`}
               >
                 Distribution
                 <br />

@@ -36,9 +36,9 @@ const HowItWorks = () => {
   ];
 
   return (
-    <div className=" relative pt-10 pb-16">
+    <div className=" relative pt-10 pb-16 flex flex-col">
       <h1
-        className={`${AntaFont.className} text-[56px] font-normal text-center mt-12`}
+        className={`${AntaFont.className} text-[56px] font-normal text-center mt-12 z-10 bg-white xl:bg-transparent`}
       >
         How it works
       </h1>

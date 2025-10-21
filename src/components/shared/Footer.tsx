@@ -109,7 +109,7 @@ export default function Footer() {
           </div>
 
           <div
-            className={`flex flex-col space-y-4 ${RubikFont.className} text-[16px] pr-30`}
+            className={`flex flex-col space-y-4 ${RubikFont.className} text-[16px] xl:pr-30`}
           >
             <nav className="space-y-6">
               <Link

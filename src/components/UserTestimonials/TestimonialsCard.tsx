@@ -17,7 +17,7 @@ export default function TestimonialCard({
   testimonial,
 }: TestimonialCardProps) {
   return (
-    <div className="flex flex-col h-full relative">
+    <div className="flex flex-col h-full relative last:self-center xl:last:justify-self-auto last:justify-self-center last:col-span-2 xl:last:col-span-1 last:w-full xl:last:w-auto xl:last:pt-0 last:pt-14 last:max-w-[452px] ">
       <div className=" border-2 border-foreground rounded-4xl p-6 sm:p-8 flex flex-col items-center bg-card ">
         <div className="relative mb-4">
           <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden">
@@ -48,9 +48,9 @@ export default function TestimonialCard({
         </p>
       </div>
 
-      <div className="mt-4 sm:mt-6 bg-[#FF4F3A] rounded-full px-6 sm:px-8 py-4 sm:py-6 flex items-center justify-center absolute -bottom-10 left-6 right-6">
+      <div className="mt-4 sm:mt-6 bg-[#FF4F3A] rounded-full px-3 xl:px-8 py-4  xl:py-6 flex items-center justify-center absolute -bottom-8 xl:-bottom-10 left-6 right-6">
         <p
-          className={`text-white text-center text-sm sm:text-[16px] leading-5 font-normal ${RubikFont.className}`}
+          className={`text-white text-center text-sm xl:text-[16px] leading-5 font-normal ${RubikFont.className}`}
         >
           {testimonial}
         </p>

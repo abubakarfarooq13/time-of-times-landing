@@ -24,7 +24,7 @@ const data = [
 
 export function PieChart() {
   return (
-    <div className="w-full h-64 md:h-80 lg:h-[500px] lg:w-[500px] flex items-center justify-center relative">
+    <div className="w-full h-64 md:h-80 xl:h-[500px] xl:w-[500px] flex items-center justify-center relative">
       <ResponsiveContainer width="100%" height="100%" className="z-10 ">
         <RechartsPieChart>
           {/* <Tooltip /> */}

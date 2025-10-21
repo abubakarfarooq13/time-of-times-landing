@@ -9,7 +9,7 @@ import { ArrowUpRight } from "lucide-react";
 const JoinCommunity = () => {
   return (
     <div
-      className={` bg-white pt-12 px-4 sm:px-6 lg:px-8 z-10 flex flex-col  w-full ${AntaFont.className}`}
+      className={` bg-white xl:pt-12 px-4 sm:px-6 lg:px-8 z-10 flex flex-col  w-full ${AntaFont.className}`}
     >
       <div className="text-center">
         <h2 className="text-[56px]">JOIN COMMUNITY</h2>
@@ -25,7 +25,7 @@ const JoinCommunity = () => {
         </div>
       </section>
 
-      <section className="py-2 px-4 md:px-8 ">
+      <section className="xl:py-2 px-4 md:px-8 ">
         <div className=" mx-auto flex justify-center gap-4">
           <Button
             variant="default"
@@ -50,7 +50,7 @@ const JoinCommunity = () => {
         </div>
       </section>
 
-      <section className="mt-14 px-4 md:px-8">
+      <section className="mt-14 px-4 xl:px-8">
         <div className=" mx-auto">
           <OwnTheDaySection />
         </div>

@@ -19,7 +19,7 @@ export function FeatureCard({
   width,
 }: FeatureCardProps) {
   return (
-    <div className="bg-[#BDB8C3] rounded-4xl p-8 relative">
+    <div className="bg-[#BDB8C3] rounded-4xl p-8 w-full relative ">
       <div className={`absolute ${top} ${right}`}>
         <Image
           src={icon}

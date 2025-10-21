@@ -8,18 +8,18 @@ import { ArrowUpRight } from "lucide-react";
 
 export function Tokenomics() {
   return (
-    <section className="px-4 py-8 md:px-8 md:py-12 lg:px-12 lg:py-16">
+    <section className="px-4 py-8 md:px-8 md:py-12 xl:px-12 lg:py-16">
       <div className=" mx-auto">
         <div className="flex justify-between gap-8 lg:gap-12 items-center relative">
           <div className="flex flex-col justify-center lg:col-span-1">
             <h1
-              className={`text-4xl md:text-5xl lg:text-[56px] font-bold text-white mb-4 leading-16 ${AntaFont.className}`}
+              className={`text-4xl lg:text-5xl xl:text-[56px] font-bold text-white mb-4 leading-16 ${AntaFont.className}`}
             >
               $TIMES
               <br />
               TOKENOMICS
             </h1>
-            <p className="text-lg md:text-2xl text-white mb-4 font-medium">
+            <p className="text-lg md:text-xl xl:text-2xl text-white mb-4 font-medium">
               Your Voice Matters — and Pays
             </p>
 
@@ -48,7 +48,7 @@ export function Tokenomics() {
             </Button>
           </div>
 
-          <div className="flex justify-center w-full absolute">
+          <div className="flex justify-center w-full absolute left-10 xl:left-0">
             <PieChart />
           </div>
 

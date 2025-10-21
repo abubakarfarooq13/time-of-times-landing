@@ -19,16 +19,16 @@ const EarlyBirdsAirdrop = () => {
           Earn Pre-TGE $TIMES Now
         </span>
       </div>
-      <div className="flex mt-4 justify-around">
-        <div className="space-y-8">
+      <div className="flex mt-10 xl:mt-8 justify-around">
+        <div className="xl:space-y-8 space-y-6">
           <div>
             <h2 className={`font-medium text-[24px] ${RubikFont.className}`}>
               ”Early Birds” Program{" "}
             </h2>
             <p className={`text-[16px] font-normal ${RubikFont.className}`}>
-              You are lucky to be here before TGE. You can get tokens on the
-              most favorable
-              <br /> terms – even for free!{" "}
+              You are lucky to be here before TGE. You can get tokens{" "}
+              <br className="xl:hidden block" /> on the most favorable
+              <br className="hidden xl:block" /> terms – even for free!{" "}
             </p>
           </div>
           <div>
@@ -36,11 +36,12 @@ const EarlyBirdsAirdrop = () => {
               How it works
             </h2>
             <p className={`text-[16px] font-normal ${RubikFont.className}`}>
-              Follow Time of Times on Telegram and X, complete quests, post
-              public
-              <br /> mentions, join AMAs, and invite friends. Rewards may
-              include $TIMES with
-              <br /> vesting and role badges.
+              Follow Time of Times on Telegram and X, complete quests,
+              <br className="xl:hidden block" /> post public
+              <br className="hidden xl:block" /> mentions, join AMAs, and invite
+              friends. Rewards <br className="xl:hidden block" />
+              may include $TIMES with
+              <br className="hidden xl:block" /> vesting and role badges.
             </p>
           </div>
           <Button
@@ -55,7 +56,7 @@ const EarlyBirdsAirdrop = () => {
           </Button>
         </div>
         <div className="flex relative ">
-          <div className="absolute -left-50 top-20">
+          <div className="absolute w-[80px] xl:w-[100px] -left-30  2xl:-left-50 top-20">
             <Image
               src="/earlybirdsairdrop/b1.png"
               alt=""
@@ -64,7 +65,7 @@ const EarlyBirdsAirdrop = () => {
               quality={100}
             />
           </div>
-          <div className="mr-20">
+          <div className="mr-10 xl:mr-20 w-[200px] xl:w-[250px]">
             <Image
               src="/earlybirdsairdrop/b2.png"
               alt=""

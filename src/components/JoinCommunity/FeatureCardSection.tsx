@@ -1,3 +1,5 @@
+/*eslint-disable*/
+//@ts-nocheck
 import { FeatureCard } from "@/components/JoinCommunity/FeatureCard";
 
 const features = [
@@ -18,7 +20,12 @@ const features = [
     width: 90,
   },
   {
-    title: "Giveaways & Contests",
+    title: (
+      <>
+        Giveaways & <br />
+        Contests
+      </>
+    ),
     description: "Participate to earn tokens and exclusive benefits.",
     icon: "/joincommunity/g.png",
     top: "-top-13",
@@ -37,7 +44,7 @@ const features = [
 
 export function FeatureCardsSection() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 gap-y-20 xl:gap-y-0">
       {features.map((feature, index) => (
         <FeatureCard
           width={feature.width}

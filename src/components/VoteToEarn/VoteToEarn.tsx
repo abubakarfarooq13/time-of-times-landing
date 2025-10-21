@@ -7,7 +7,7 @@ import { FairPlayEconomy } from "./FairPlayEconomy";
 const VoteToEarn = () => {
   return (
     <div
-      className={` bg-white py-12 px-4 sm:px-6 lg:px-8 z-10 flex flex-col  w-full ${AntaFont.className}`}
+      className={` bg-white xl:py-12 px-4 sm:px-6 lg:px-8 z-10 flex flex-col  w-full ${AntaFont.className}`}
     >
       <div className="text-center">
         <h2 className="text-[56px]">Vote-to-Earn </h2>
@@ -19,7 +19,7 @@ const VoteToEarn = () => {
         <p className={`text-[16px] ${RubikFont.className} mt-2`}>
           By voting with $TIMES tokens, users shape the platform’s history. If
           your chosen artwork wins, you receive part of the auction profits. The
-          more <br /> you engage, the more you earn.
+          more <br className="hidden xl:block" /> you engage, the more you earn.
         </p>
       </div>
       <div className="flex flex-col items-center justify-center mt-14 relative">
@@ -35,9 +35,10 @@ const VoteToEarn = () => {
         >
           <p>
             Artificial Intelligence curates daily news and ensures fair voting.
-            DAO <br />
+            DAO <br className="hidden lg:block" />
             governance gives power to the community, not corporations. Time of
-            <br /> Times runs on transparency and decentralization.{" "}
+            <br className="hidden lg:block" /> Times runs on transparency and
+            decentralization.{" "}
           </p>
         </div>
       </div>

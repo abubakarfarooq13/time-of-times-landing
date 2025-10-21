@@ -188,9 +188,9 @@ export default function EveryDayIsMinted() {
           ))}
         </div>
       </div>
-      <div className="flex justify-between items-center mt-[250px] gap-8">
+      <div className="flex justify-between items-center  mt-[200px] xl:mt-[250px] gap-8">
         <div className="bg-[#FF4F3A] rounded-4xl p-6 relative w-full">
-          <div className="absolute -top-[180px] left-1/2 -translate-x-1/2">
+          <div className="absolute -top-[140px] xl:-top-[180px] left-1/2 -translate-x-1/2">
             <Image
               src="/everydayisminted/man.png"
               alt="AI Vision"
@@ -199,10 +199,10 @@ export default function EveryDayIsMinted() {
             />
           </div>
           <div
-            className={`text-center text-white mt-8 font-normal ${AntaFont.className}`}
+            className={`text-center text-white mt-4 xl:mt-8 font-normal ${AntaFont.className}`}
           >
             <span className="text-[24px] ">FOR ARTIST</span>
-            <h2 className="text-[42px] font-normal leading-11 mt-8">
+            <h2 className="text-[42px] font-normal leading-11 mt-4 xl:mt-8">
               Turn
               <br />
               Headlines Into Art{" "}
@@ -211,14 +211,14 @@ export default function EveryDayIsMinted() {
               className={`${RubikFont.className} text-[16px] font-normal my-4`}
             >
               Upload your vision of the day’s event, compete in community
-              voting, and earn <br />
+              voting, and earn <br className="hidden 2xl:block" />
               rewards. Top artists gain exposure, income, and a place in
               history.
             </p>
           </div>
         </div>
         <div className="bg-[#221235] rounded-4xl p-6 relative w-full">
-          <div className="absolute -top-[180px] left-1/2 -translate-x-1/2">
+          <div className="absolute -top-[140px] xl:-top-[180px] left-1/2 -translate-x-1/2">
             <Image
               src="/everydayisminted/man-2.png"
               alt="AI Vision"
@@ -227,10 +227,10 @@ export default function EveryDayIsMinted() {
             />
           </div>
           <div
-            className={`text-center text-white mt-8 font-normal ${AntaFont.className}`}
+            className={`text-center text-white mt-4 xl:mt-8 font-normal ${AntaFont.className}`}
           >
             <span className="text-[24px] ">FOR COLLECTOR</span>
-            <h2 className="text-[42px] font-normal leading-11 mt-8">
+            <h2 className="text-[42px] font-normal leading-11 mt-4 xl:mt-8">
               Own a
               <br />
               Piece of History
@@ -240,8 +240,8 @@ export default function EveryDayIsMinted() {
             >
               Each NFT is scarce and meaningful. With only 365 per year,
               collectors secure digital
-              <br /> artifacts with cultural and historical value. Buy, resell,
-              or hold forever.
+              <br className="hidden 2xl:block" /> artifacts with cultural and
+              historical value. Buy, resell, or hold forever.
             </p>
           </div>
         </div>
