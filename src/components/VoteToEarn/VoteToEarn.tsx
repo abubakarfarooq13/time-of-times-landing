@@ -41,7 +41,9 @@ const VoteToEarn = () => {
           </p>
         </div>
       </div>
-      <div className={`bg-[#FF4F3A] rounded-4xl mt-24 ${RubikFont.className}`}>
+      <div
+        className={`bg-[#FF4F3A] overflow-hidden rounded-4xl mt-24 ${RubikFont.className}`}
+      >
         <Tokenomics />
         <FairPlayEconomy />
       </div>

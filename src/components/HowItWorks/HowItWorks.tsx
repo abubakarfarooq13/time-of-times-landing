@@ -36,7 +36,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <div className=" relative ">
+    <div className=" relative pt-10 pb-16">
       <h1
         className={`${AntaFont.className} text-[56px] font-normal text-center mt-12`}
       >
