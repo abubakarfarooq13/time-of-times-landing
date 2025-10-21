@@ -90,13 +90,7 @@ const Hero = () => {
         </div>
         <div className="absolute right-0 bottom-0">
           <div>
-            <Image
-              src="/hero/times.svg"
-              alt=""
-              quality={100}
-              width={700}
-              height={600}
-            />
+            <Image src="/hero/times.svg" alt="" width={700} height={600} />
           </div>
         </div>
       </div>
