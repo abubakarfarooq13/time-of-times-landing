@@ -14,17 +14,24 @@ export function Tokenomics() {
           <div className="flex flex-col md:flex-row items-center w-full justify-between">
             <div className="flex flex-col items-center md:items-start justify-center lg:col-span-1">
               <h1
+                data-aos="fade-left"
                 className={`text-center md:text-start text-4xl md:text-[56px] lg:text-5xl xl:text-[56px] font-bold text-white mb-1 md:mb-4 md:leading-16 ${AntaFont.className}`}
               >
                 $TIMES
                 <br />
                 TOKENOMICS
               </h1>
-              <p className="text-xl text-center md:text-start md:text-2xl lg:text-xl xl:text-2xl text-white mb-2 md:mb-4 font-medium">
+              <p
+                data-aos="fade-left"
+                className="text-xl text-center md:text-start md:text-2xl lg:text-xl xl:text-2xl text-white mb-2 md:mb-4 font-medium"
+              >
                 Your Voice Matters — and Pays
               </p>
 
-              <div className=" mb-4 md:mb-8 text-white text-[16px]">
+              <div
+                data-aos="fade-left"
+                className=" mb-4 md:mb-8 text-white text-[16px]"
+              >
                 <p>
                   <span className="font-semibold">Name:</span> Time of Times
                   Token
@@ -38,6 +45,7 @@ export function Tokenomics() {
                 </p>
               </div>
               <Button
+                data-aos="fade-left"
                 variant="default"
                 className={`rounded-full max-w-max !px-6 !py-5.5   md:text-[16px] font-medium ${OutfitFont.className}`}
               >
@@ -49,7 +57,10 @@ export function Tokenomics() {
               </Button>
             </div>
 
-            <div className="hidden lg:flex  justify-center w-full lg:absolute  left-10 xl:left-0">
+            <div
+              data-aos="fade-up"
+              className="hidden lg:flex  justify-center w-full lg:absolute  left-10 xl:left-0"
+            >
               <PieChart />
             </div>
 

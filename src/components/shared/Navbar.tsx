@@ -5,7 +5,7 @@ import { ArrowUpRight, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-
+import { motion } from "motion/react";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -44,7 +44,11 @@ const Navbar = () => {
   };
 
   return (
-    <>
+    <motion.div
+      initial={{ y: -80, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
       <nav
         className={`fixed  ${
           isScrolled ? "top-4" : "top-0"
@@ -182,7 +186,7 @@ const Navbar = () => {
       )}
 
       <div className="h-24 lg:h-28" />
-    </>
+    </motion.div>
   );
 };
 

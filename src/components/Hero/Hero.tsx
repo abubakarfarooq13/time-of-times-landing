@@ -1,8 +1,10 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { RubikFont, TomorrowFont } from "@/lib/font";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
+import { motion } from "motion/react";
 const Hero = () => {
   const contentMarque = [
     {
@@ -13,9 +15,12 @@ const Hero = () => {
     },
   ];
   return (
-    <div className="relative overflow-hidden mt-1 md:mt-4 lg:mt-0  rounded-4xl hero-bg-shadow z-10 mx-2 lg:mx-0">
+    <div className="relative overflow-hidden mt-1 md:mt-4 lg:mt-0  rounded-4xl hero-bg-shadow z-10 mx-2 xl:mx-0">
       <div className=" hero-bg rounded-4xl  w-full  xl:min-h-[650px] ">
-        <div
+        <motion.div
+          initial={{ y: -80, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
           className={`w-full px-2 md:px-4 lg:px-8 pt-4 md:pt-8 ${RubikFont.className}`}
         >
           <Marquee
@@ -39,11 +44,16 @@ const Hero = () => {
               </div>
             ))}
           </Marquee>
-        </div>
+        </motion.div>
         <div className="flex flex-col ">
           <div className="relative z-10 container mx-auto px-4 lg:px-8 py-8 xl:py-16">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="text-white text-center lg:text-start  space-y-3 lg:pl-8 xl:pl-16">
+              <motion.div
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+                className="text-white text-center lg:text-start  space-y-3 lg:pl-8 xl:pl-16"
+              >
                 <h1
                   className={`text-5xl md:text-[64px] lg:text-6xl xl:text-[64px] font-medium leading-tight ${TomorrowFont.className}`}
                 >
@@ -70,7 +80,7 @@ const Hero = () => {
                 </div>
 
                 <div className="flex flex-col md:flex-row justify-center lg:justify-start gap-4 lg:pt-4 xl:pt-8">
-                  <Button className="rounded-full bg-[#FF4F3A] border-2 border-[#FF4F3A] text-white hover:bg-white/90 font-medium text-[16px] !px-5 !py-5 xl:!px-6 xl:!py-6">
+                  <Button className="rounded-full bg-[#FF4F3A] border-2 border-[#FF4F3A]  text-white hover:bg-transparent font-medium text-[16px] !px-5 !py-5 xl:!px-6 xl:!py-6">
                     Join Community
                     <ArrowUpRight
                       strokeWidth={2.5}
@@ -80,7 +90,7 @@ const Hero = () => {
 
                   <Button
                     variant="outline"
-                    className="rounded-full bg-transparent border-2 border-[#FF4F3A] text-white hover:bg-white/90 font-medium text-[16px] !px-5 !py-5 xl:!px-6 xl:!py-6"
+                    className="rounded-full bg-transparent border-2 border-[#FF4F3A] text-white hover:text-white hover:bg-[#FF4F3A] font-medium text-[16px] !px-5 !py-5 xl:!px-6 xl:!py-6"
                   >
                     Join Community
                     <ArrowUpRight
@@ -89,13 +99,18 @@ const Hero = () => {
                     />
                   </Button>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
           <div className="lg:absolute right-0 bottom-0 md:w-auto   lg:w-[490px] xl:w-[690px] flex justify-end ">
-            <div className="w-[330px] sm:w-auto">
+            <motion.div
+              initial={{ y: 400, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+              className="w-[330px] sm:w-auto"
+            >
               <Image src="/hero/t2.png" alt="" width={690} height={600} />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

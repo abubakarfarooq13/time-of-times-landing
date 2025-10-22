@@ -75,6 +75,7 @@ const RoadMap = () => {
       <div className="flex flex-col lg:flex-row w-full items-center bg-[#221235] rounded-4xl pt-6 lg:pt-0 justify-between xl:p-6 md:gap-6 min-h-[300px] overflow-hidden">
         <div>
           <h2
+            data-aos="fade-left"
             className={`text-[56px] lg:text-5xl xl:text-[56px] text-[#FF4F3A] ${AntaFont.className} lg:ml-10`}
           >
             Roadmap
@@ -83,6 +84,8 @@ const RoadMap = () => {
         <div className="relative pr-10  xl:mr-10">
           {roadmap.map((item, index) => (
             <div
+              data-aos="fade-up"
+              data-aos-delay={index * 200}
               key={index}
               className={`${RubikFont.className} absolute flex flex-col gap-2 ${item.top} ${item.left} ${item.right} ${item.bottom}`}
             >

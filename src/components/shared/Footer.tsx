@@ -9,7 +9,10 @@ export default function Footer() {
         <div className="flex  flex-col md:flex-row justify-center md:justify-between gap-8 md:gap-12">
           <div className="flex flex-col items-center  md:items-start md:space-y-6">
             <div className="flex items-center space-x-2">
-              <div className="text-2xl md:text-3xl font-bold tracking-wider">
+              <div
+                data-aos="fade-up"
+                className="text-2xl md:text-3xl font-bold tracking-wider"
+              >
                 <Image
                   src="/logofooter.png"
                   alt="logo"
@@ -20,7 +23,10 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="flex items-center mt-2 md:mt-0 space-x-6">
+            <div
+              data-aos="fade-up"
+              className="flex items-center mt-2 md:mt-0 space-x-6"
+            >
               <a
                 href="https://twitter.com"
                 target="_blank"
@@ -84,6 +90,7 @@ export default function Footer() {
             </div>
 
             <div
+              data-aos="fade-up"
               className={`text-center md:text-start hidden md:block ${RubikFont.className}`}
             >
               <p className="text-[#ff4e3b] font-semibold text-[16px]">
@@ -99,7 +106,7 @@ export default function Footer() {
           </div>
 
           <div className="hidden md:flex items-center justify-center relative w-[350px] z-0">
-            <div className="absolute lg:-top-30">
+            <div data-aos="fade-up" className="absolute lg:-top-30">
               <Image
                 src="/footer/img.png"
                 alt="x"
@@ -115,6 +122,7 @@ export default function Footer() {
           >
             <nav className="text-center md:text-start md:space-y-6 ">
               <Link
+                data-aos="fade-up"
                 href="/community"
                 className="block text-white hover:text-[#ff4e3b] transition-colors"
               >
@@ -127,24 +135,28 @@ export default function Footer() {
                 Join Waitlist
               </Link>
               <Link
+                data-aos="fade-up"
                 href="/whitepaper"
                 className="block text-white hover:text-[#ff4e3b] transition-colors"
               >
                 White Paper
               </Link>
               <Link
+                data-aos="fade-up"
                 href="/tokenomics"
                 className="block text-white hover:text-[#ff4e3b] transition-colors"
               >
                 Tokenomics
               </Link>
               <Link
+                data-aos="fade-up"
                 href="/terms"
                 className="block text-white hover:text-[#ff4e3b] transition-colors"
               >
                 Terms & Conditions
               </Link>
               <Link
+                data-aos="fade-up"
                 href="/privacy"
                 className="block text-white hover:text-[#ff4e3b] transition-colors"
               >
@@ -154,6 +166,7 @@ export default function Footer() {
           </div>
         </div>
         <div
+          data-aos="fade-up"
           className={`text-center md:text-start md:hidden block mt-2 md:mt-0 ${RubikFont.className}`}
         >
           <p className="text-[#ff4e3b] font-semibold text-[16px]">

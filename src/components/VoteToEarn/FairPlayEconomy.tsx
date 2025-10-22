@@ -7,6 +7,7 @@ export function FairPlayEconomy() {
     <section className="pb-4 md:pb-8 px-4 md:px-8">
       <div className=" mx-auto">
         <h2
+          data-aos="fade-up"
           className={`text-5xl md:text-[56px]  font-normal text-center text-[#221235] mb-6 md:mb-4 ${AntaFont.className}`}
         >
           FAIR PLAY ECONOMY
@@ -16,6 +17,7 @@ export function FairPlayEconomy() {
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8 md:gap-6">
             <div className="lg:col-span-1 flex flex-col justify-center items-center lg:items-start">
               <h3
+                data-aos="fade-left"
                 className={`text-2xl md:text-[56px] lg:text-5xl xl:text-[56px] leading-14 font-medium text-[#FF4F3A] mb-4 ${AntaFont.className}`}
               >
                 Distribution&nbsp;
@@ -23,6 +25,7 @@ export function FairPlayEconomy() {
                 Points:
               </h3>
               <div
+                data-aos="fade-up"
                 className={`bg-white rounded-full px-4 py-3 w-fit md:text-[16px] text-sm ${AntaFont.className} -rotate-6 -mt-3`}
               >
                 <p className=" text-black text-center font-medium">
@@ -36,7 +39,10 @@ export function FairPlayEconomy() {
             <div
               className={`lg:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-6 ${AntaFont.className}`}
             >
-              <div className="flex flex-col items-center text-center">
+              <div
+                data-aos="fade-up"
+                className="flex flex-col items-center text-center"
+              >
                 <div className="text-4xl md:text-[56px] font-normal text-white mb-2">
                   50%
                 </div>
@@ -52,7 +58,10 @@ export function FairPlayEconomy() {
                 </p>
               </div>
 
-              <div className="flex flex-col items-center text-center">
+              <div
+                data-aos="fade-up"
+                className="flex flex-col items-center text-center"
+              >
                 <div className="text-4xl md:text-[56px] font-normal text-white mb-2">
                   25%
                 </div>
@@ -69,7 +78,10 @@ export function FairPlayEconomy() {
                 </p>
               </div>
 
-              <div className="flex flex-col items-center text-center">
+              <div
+                data-aos="fade-up"
+                className="flex flex-col items-center text-center"
+              >
                 <div className="text-4xl md:text-[56px] font-normal text-white mb-2">
                   25%
                 </div>

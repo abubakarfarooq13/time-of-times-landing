@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import AOSWrapper from "@/components/hook/useAos";
 
 const baseUrl = "https://time-of-times.vercel.app/";
 // const baseUrl = "http://localhost:3000";
@@ -100,7 +101,9 @@ export default function RootLayout({
       <head>
         <meta name="theme-color" content="#FF4F3A" />
       </head>
-      <body className={` antialiased`}>{children}</body>
+      <body className={` antialiased`}>
+        <AOSWrapper>{children}</AOSWrapper>
+      </body>
     </html>
   );
 }

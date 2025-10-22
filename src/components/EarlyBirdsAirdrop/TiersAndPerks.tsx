@@ -7,12 +7,16 @@ const TiersAndPerks = () => {
     <div className="mt-6 xl:mt-4 flex justify-center">
       <div className="flex flex-col items-center  lg:flex-row justify-between bg-[#BDB8C3] rounded-4xl lg:rounded-full px-20 py-6 max-w-7xl w-full">
         <div className="flex justify-center flex-col items-center lg:items-start lg:block">
-          <h2 className="font-normal text-5xl md:text-[56px] md:leading-14 text-[#221235] text-center lg:text-start">
+          <h2
+            data-aos="fade-left"
+            className="font-normal text-5xl md:text-[56px] md:leading-14 text-[#221235] text-center lg:text-start"
+          >
             Tiers&nbsp;
             <br className="hidden lg:block" />
             and Perks
           </h2>
           <p
+            data-aos="fade-left"
             className={`${RubikFont.className} bg-white text-sm md:text-[16px] rounded-full text-center -rotate-6 mt-4 max-w-max px-4 py-2`}
           >
             The more active you are,
@@ -20,7 +24,11 @@ const TiersAndPerks = () => {
           </p>
         </div>
         <div className="flex items-center mt-8 lg:mt-0">
-          <div className="text-center">
+          <div
+            data-aos="fade-left"
+            data-aos-delay="500"
+            className="text-center"
+          >
             <div
               className={`md:h-30 md:w-30 h-20 w-20 flex items-center justify-center rounded-full bg-[#928B99] mb-4`}
             >
@@ -32,7 +40,11 @@ const TiersAndPerks = () => {
               SILVER
             </span>
           </div>
-          <div className="text-center -ml-2 md:-ml-4">
+          <div
+            data-aos="fade-left"
+            data-aos-delay="1000"
+            className="text-center -ml-2 md:-ml-4"
+          >
             <div
               className={`md:h-30 md:w-30 h-20 w-20 flex items-center justify-center rounded-full bg-[#FF8C82] mb-4`}
             >
@@ -44,7 +56,11 @@ const TiersAndPerks = () => {
               GOLD
             </span>
           </div>
-          <div className="text-center -ml-2 md:-ml-4">
+          <div
+            data-aos="fade-left"
+            data-aos-delay="1500"
+            className="text-center -ml-2 md:-ml-4"
+          >
             <div
               className={`md:h-30 md:w-30 h-20 w-20 flex items-center justify-center rounded-full bg-[#251137] mb-4`}
             >

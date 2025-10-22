@@ -16,12 +16,19 @@ const distributionData = [
 export function DistributionLegend() {
   return (
     <div className="space-y-3">
-      <h3 className="text-xl md:text-2xl font-medium text-white mb-4">
+      <h3
+        data-aos="fade-up"
+        className="text-xl md:text-2xl font-medium text-white mb-4"
+      >
         Distribution
       </h3>
       <div className="space-y-2">
         {distributionData.map((item, index) => (
-          <div key={index} className="flex items-center gap-3 text-white">
+          <div
+            data-aos="fade-up"
+            key={index}
+            className="flex items-center gap-3 text-white"
+          >
             <div
               className="w-6 h-2 md:w-[20px] md:h-2 border border-white rounded-full flex-shrink-0"
               style={{ backgroundColor: item.color }}

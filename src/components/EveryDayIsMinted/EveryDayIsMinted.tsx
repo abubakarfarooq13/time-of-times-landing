@@ -95,16 +95,20 @@ export default function EveryDayIsMinted() {
     >
       <div className=" mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-[56px] font-normal text-black mb-2 text-balance">
+          <h1
+            data-aos="fade-up"
+            className="text-4xl md:text-[56px] font-normal text-black mb-2 text-balance"
+          >
             Every Day Is Minted
           </h1>
           <p
+            data-aos="fade-up"
             className={`text-xl md:text-[24px] font-medium text-balance ${RubikFont.className}`}
           >
             Once and Forever
           </p>
         </div>
-        <div className="relative mx-2 md:mx-0">
+        <div className="relative mx-2 xl:mx-0">
           <button
             onClick={handlePrev}
             className="absolute left-8 top-1/2 -translate-y-1/2 -translate-x-12 sm:-translate-x-16 z-10 p-2 bg-white rounded-full border-1 border-[#FF4F3A] text-[#FF4F3A] other-shadow-2 hover:bg-orange-50 transition-colors"
@@ -113,7 +117,7 @@ export default function EveryDayIsMinted() {
             <ChevronLeft strokeWidth={2} className="w-6 h-6" />
           </button>
 
-          <div className={`${OutfitFont.className} `}>
+          <div data-aos="fade-up" className={`${OutfitFont.className} `}>
             <div className="flex gap-4 sm:gap-6 lg:gap-8 ">
               {visibleEvents.map((event) => (
                 <div
@@ -175,7 +179,10 @@ export default function EveryDayIsMinted() {
           </button>
         </div>
 
-        <div className="flex justify-center gap-2 mt-8 sm:mt-12">
+        <div
+          data-aos="fade-up"
+          className="flex justify-center gap-2 mt-8 sm:mt-12"
+        >
           {Array.from({ length: maxIndex + 1 }).map((_, index) => (
             <button
               key={index}
@@ -191,7 +198,10 @@ export default function EveryDayIsMinted() {
         </div>
       </div>
       <div className="flex justify-between flex-col md:flex-row items-center  mt-[200px] xl:mt-[250px] gap-8">
-        <div className="bg-[#FF4F3A] md:min-h-[400px] lg:min-h-auto rounded-4xl p-6 relative w-full">
+        <div
+          data-aos="fade-right"
+          className="bg-[#FF4F3A] md:min-h-[400px] lg:min-h-auto rounded-4xl p-6 relative w-full"
+        >
           <div className="absolute w-[250px] lg:w-auto -top-[150px] lg:-top-[140px] xl:-top-[180px] left-1/2 -translate-x-1/2">
             <Image
               src="/everydayisminted/man.png"
@@ -219,7 +229,10 @@ export default function EveryDayIsMinted() {
             </p>
           </div>
         </div>
-        <div className="bg-[#221235] rounded-4xl p-6 mt-44 md:mt-0 relative w-full">
+        <div
+          data-aos="fade-left"
+          className="bg-[#221235] rounded-4xl p-6 mt-44 md:mt-0 relative w-full"
+        >
           <div className="absolute w-[250px] lg:w-auto -top-[150px] lg:-top-[140px] xl:-top-[180px] left-1/2 -translate-x-1/2">
             <Image
               src="/everydayisminted/man-2.png"
