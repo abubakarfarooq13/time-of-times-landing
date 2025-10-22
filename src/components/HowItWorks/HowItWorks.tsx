@@ -1,7 +1,19 @@
+"use client";
 import { AntaFont, OutfitFont, RubikFont, TomorrowFont } from "@/lib/font";
-import React from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
+import React, { useEffect, useRef, useState } from "react";
+
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 const HowItWorks = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
   const news = [
     {
       hr: "1 hr",
@@ -18,14 +30,14 @@ const HowItWorks = () => {
     {
       hr: "3 hr",
       details: "Putin meets top officials after call with Trump",
-      top: "top-1/2",
+      top: "top-76",
       left: "left-1/4",
     },
     {
       hr: "6 hr",
       details: "IMF raises global growth outlook, warns of trade risks",
-      top: "top-[70%]",
-      left: "left-[70%]",
+      top: "top-92",
+      left: "left-42",
     },
     {
       hr: "7 hr",
@@ -35,54 +47,142 @@ const HowItWorks = () => {
     },
   ];
 
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const totalSteps = 6;
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  useGSAP(() => {
+    const sections = Array.from(
+      { length: totalSteps },
+      (_, i) => `.step-${i + 1}-content`
+    );
+
+    gsap.set(sections, { opacity: 0, display: "none" });
+    gsap.set(".step-1-content", { opacity: 1, display: "block" });
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".hero-gsap",
+        start: "top top",
+        end: `+=${totalSteps * 200}`,
+        scrub: 0.3,
+        pin: true,
+        anticipatePin: 1,
+      },
+      defaults: { ease: "power2.out" },
+    });
+
+    for (let i = 1; i < totalSteps; i++) {
+      const current = `.step-${i}-content`;
+      const next = `.step-${i + 1}-content`;
+
+      tl.to(current, { opacity: 0, y: -50, duration: 0.5 })
+        .set(current, { display: "none" })
+        .set(next, { display: "block", opacity: 0, y: 50 })
+        .to(next, { opacity: 1, y: 0, duration: 0.6 }, "<");
+    }
+
+    ScrollTrigger.create({
+      trigger: ".hero-gsap",
+      start: "top top",
+      end: `+=${totalSteps * 200}`,
+      scrub: 0.3,
+      onUpdate: (self) => {
+        const progressPerStep = 1 / (totalSteps - 1);
+        const currentIndex = Math.round(self.progress / progressPerStep) + 1;
+        const clampedIndex = Math.min(currentIndex, totalSteps);
+
+        gsap.to(
+          ".number-1 div, .number-2 div, .number-3 div, .number-4 div, .number-5 div, .number-6 div",
+          {
+            backgroundColor: "#E5E5E5",
+            color: "#000",
+            width: 40,
+            height: 40,
+            fontSize: "16px",
+            duration: 0.3,
+            ease: "power2.out",
+          }
+        );
+
+        gsap.to(`.number-${clampedIndex} div`, {
+          backgroundColor: "#FF4F3A",
+          color: "#fff",
+          width: 40,
+          height: 40,
+          fontSize: "16px",
+          duration: 0.3,
+          ease: "power2.out",
+          overwrite: "auto",
+        });
+      },
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((st) => st.kill());
+    };
+  });
+
   return (
-    <div className=" relative mx-2 2xl:mx-0 md:pt-10 md:pb-16 flex flex-col overflow-hidden">
+    <div className="hero-gsap relative mx-2 2xl:mx-0 md:pt-10 lg:pt-16 md:pb-10 flex flex-col ">
       <h1
         className={`${AntaFont.className} text-4xl  md:text-[56px] font-normal text-center mt-12 z-10 bg-white xl:bg-transparent`}
       >
         How it works
       </h1>
-      <div className="flex  h-[500px] w-full ">
-        <div className="relative flex items-center h-full ">
-          <div className="h-[800px] w-[800px] absolute -top-50 -left-60 border-r-2 border-[#C0C0C0]   border-dashed  rounded-full ">
+      <div className="flex   h-full  w-full ">
+        <div className="relative   flex items-center h-full ">
+          <div className="h-[800px] w-[800px] absolute -top-30 -left-50 border-r-2 border-[#C0C0C0]    border-dashed  rounded-full hidden lg:block">
             <div className="relative h-[800px]">
               <div
-                className={`absolute flex flex-col gap-3  w-[60px] z-20 -right-7 top-[430px] ${TomorrowFont.className}`}
+                className={`absolute flex flex-col gap-3 number-1  w-[60px] z-20 -right-10 top-[360px] ${TomorrowFont.className}`}
               >
-                <div className="bg-[#FF4F3A] text-white rounded-full flex items-center justify-center text-[32px] font-medium h-[60px] w-[60px] z-20  ">
+                <div className="bg-[#FF4F3A] text-white rounded-full flex items-center justify-center text-[16px] font-medium h-[40px] w-[40px] z-20  ">
                   1
                 </div>
               </div>
               <div
-                className={`absolute flex flex-col gap-3  w-[40px] z-20 -right-0 top-[510px] ${TomorrowFont.className}`}
+                className={`absolute flex flex-col gap-3 number-2  w-[40px] z-20 -right-4 top-[430px]  ${TomorrowFont.className}`}
               >
                 <div className="bg-[#E5E5E5] font-medium text-black rounded-full flex items-center justify-center text-[16px] h-[40px] w-[40px] z-20  ">
                   2
                 </div>
               </div>
               <div
-                className={`absolute flex flex-col gap-3  w-[40px] z-20 right-5.5 top-[565px] ${TomorrowFont.className}`}
+                className={`absolute flex flex-col gap-3 number-3  w-[40px] z-20 -right-1 top-[495px] ${TomorrowFont.className}`}
               >
                 <div className="bg-[#E5E5E5] font-medium text-black rounded-full flex items-center justify-center text-[16px] h-[40px] w-[40px] z-20  ">
                   3
                 </div>
               </div>
               <div
-                className={`absolute flex flex-col gap-3  w-[40px] z-20 right-13.5 top-[615px] ${TomorrowFont.className}`}
+                className={`absolute flex flex-col gap-3 number-4  w-[40px] z-20 right-5 top-[555px] ${TomorrowFont.className}`}
               >
                 <div className="bg-[#E5E5E5] font-medium text-black rounded-full flex items-center justify-center text-[16px] h-[40px] w-[40px] z-20  ">
                   4
                 </div>
               </div>
               <div
-                className={`absolute flex flex-col gap-3  w-[40px] z-20 right-23 top-[660px] ${TomorrowFont.className}`}
+                className={`absolute flex flex-col gap-3 number-5  w-[40px] z-20 right-13.5 top-[615px] ${TomorrowFont.className}`}
               >
                 <div className="bg-[#E5E5E5] font-medium text-black rounded-full flex items-center justify-center text-[16px] h-[40px] w-[40px] z-20  ">
                   5
                 </div>
               </div>
               <div
-                className={`absolute flex flex-col gap-3  w-[40px] z-20 right-34 top-[700px] ${TomorrowFont.className}`}
+                className={`absolute flex flex-col gap-3 number-6  w-[40px] z-20 right-24 top-[665px] ${TomorrowFont.className}`}
               >
                 <div className="bg-[#E5E5E5] font-medium text-black rounded-full flex items-center justify-center text-[16px] h-[40px] w-[40px] z-20  ">
                   6
@@ -90,29 +190,175 @@ const HowItWorks = () => {
               </div>
             </div>
           </div>
-          <div className="w-[150px] h-[150px] bg-[#FFCEC8] rounded-full ml-20"></div>
-          {news.map((item, index) => (
-            <div
-              key={index}
-              className={`flex gap-2 ${item.top} ${item.left} bg-white rounded-full other-shadow px-4 py-1 text-[10px] items-center absolute ${RubikFont.className}`}
-            >
-              <span className="text-[#747474] text-nowrap">{item.hr}</span>
-              <span
-                className={`text-[#444444]  text-nowrap ${OutfitFont.className}`}
-              >
-                {item.details}
-              </span>
+          <div className="w-full h-full ml-14 mt-20">
+            <div className="  step-1-content">
+              <div className="relative  flex justify-center items-center w-[300px] h-[550px]">
+                <div
+                  className="absolute left-16  w-[250px] h-[250px]  rounded-full border-none bg-[#FFFAF9]"
+                  style={{
+                    animation: "pulse-expand 2s ease-out infinite",
+                    animationDelay: "1s",
+                    opacity: 0,
+                  }}
+                />
+
+                <div
+                  className="absolute left-22.5 w-[200px] h-[200px] rounded-full border-none bg-[#FFEDEA] "
+                  style={{
+                    animation: "pulse-expand 2s ease-out infinite",
+                    animationDelay: "2s",
+                    opacity: 0,
+                  }}
+                />
+                <div className="w-[150px] z-10 h-[150px] bg-[#FFCEC8] rounded-full ml-20"></div>
+              </div>
+              {news.map((item, index) => (
+                <div
+                  key={index}
+                  className={`flex gap-2 ${item.top} ${item.left} bg-white rounded-full other-shadow px-4 z-20 py-1 text-[10px] items-center absolute ${RubikFont.className}`}
+                >
+                  <span className="text-[#747474] text-nowrap">{item.hr}</span>
+                  <span
+                    className={`text-[#444444]  text-nowrap ${OutfitFont.className}`}
+                  >
+                    {item.details}
+                  </span>
+                </div>
+              ))}
             </div>
-          ))}
+            <div className="  step-2-content">
+              <div className="relative  flex justify-center items-center w-[400px] h-[550px]">
+                <div className="absolute top-0 z-5 -right-14">
+                  <Image
+                    src="/howitworks/2a.png"
+                    alt="Step 2"
+                    width={300}
+                    height={300}
+                  />
+                </div>
+                <div className="absolute bottom-0 left-0">
+                  <Image
+                    src="/howitworks/2b.png"
+                    alt="Step 2"
+                    width={300}
+                    height={300}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="  step-3-content">
+              <div className="relative  flex justify-center items-center w-[400px] h-[550px]">
+                <div className="">
+                  <Image
+                    src="/howitworks/3.png"
+                    alt="Step 3"
+                    width={300}
+                    height={300}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="  step-4-content">
+              <div className="relative  flex justify-center items-center w-[400px] h-[550px]">
+                <div className="">
+                  <Image
+                    src="/howitworks/4.png"
+                    alt="Step 4"
+                    width={400}
+                    height={400}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="  step-5-content">
+              <div className="relative  flex justify-center items-center w-[400px] h-[550px]">
+                <div className="">
+                  <Image
+                    src="/howitworks/5.png"
+                    alt="Step 5"
+                    width={400}
+                    height={400}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="  step-6-content">
+              <div className="relative  flex justify-center items-center w-[430px]  h-[550px]">
+                <div className="">
+                  <Image
+                    src="/howitworks/6.png"
+                    alt="Step 6"
+                    width={500}
+                    height={500}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="ml-[380px] mt-[220px]">
+        <div className="lg:ml-[300px] xl:ml-[380px] mt-[220px] step-1-content">
           <div
             className={`flex flex-col ${TomorrowFont.className} text-[32px] font-medium `}
           >
             <span>Note of the Day</span>
             <span className={`${RubikFont.className} text-[19px] font-normal`}>
               AI scans global media and selects the most discussed news.
+            </span>
+          </div>
+        </div>
+        <div className=" lg:ml-[200px] xl:ml-[280px] mt-[400px] lg:mt-[220px] step-2-content hidden">
+          <div
+            className={`flex flex-col ${TomorrowFont.className} text-[32px] font-medium `}
+          >
+            <span>Two Artworks</span>
+            <span className={`${RubikFont.className} text-[19px] font-normal`}>
+              AI creates one artwork, while artists from the community upload
+              their own.
+            </span>
+          </div>
+        </div>
+        <div className="-ml-[100px] lg:ml-[200px] xl:ml-[280px] mt-[220px] step-3-content hidden">
+          <div
+            className={`flex flex-col ${TomorrowFont.className} text-[32px] font-medium `}
+          >
+            <span>Community Voting</span>
+            <span className={`${RubikFont.className} text-[19px] font-normal`}>
+              Users vote with $TIMES tokens to choose the best human-made
+              artwork.
+            </span>
+          </div>
+        </div>
+        <div className="lg:ml-[200px] xl:ml-[280px] mt-[220px] step-4-content hidden">
+          <div
+            className={`flex flex-col ${TomorrowFont.className} text-[32px] font-medium `}
+          >
+            <span> Minting & Auction</span>
+            <span className={`${RubikFont.className} text-[19px] font-normal`}>
+              The AI artwork and the winning human artwork are minted as NFTs
+              and auctioned.
+            </span>
+          </div>
+        </div>
+        <div className="-ml-[50px] lg:ml-[200px] xl:ml-[280px] mt-[220px] step-5-content hidden">
+          <div
+            className={`flex flex-col ${TomorrowFont.className} text-[32px] font-medium `}
+          >
+            <span>Rewards</span>
+            <span className={`${RubikFont.className} text-[19px] font-normal`}>
+              Profits are shared fairly: 50% to the artist, 25% to voters, 25%
+              to DAO.
+            </span>
+          </div>
+        </div>
+        <div className="-ml-[80px] lg:ml-[200px] xl:ml-[260px] mt-[220px]  step-6-content hidden">
+          <div
+            className={`flex flex-col ${TomorrowFont.className} text-[32px] font-medium `}
+          >
+            <span>Historical Value</span>
+            <span className={`${RubikFont.className} text-[19px] font-normal`}>
+              One-of-a-kind NFTs of the day grow over time, gaining historical
+              value.
             </span>
           </div>
         </div>

@@ -13,15 +13,15 @@ const Navbar = () => {
   const NavItems = [
     {
       label: "Whitepaper",
-      href: "#whitepaper",
+      href: "/",
     },
     {
       label: "Contact",
-      href: "#contact",
+      href: "/",
     },
     {
       label: "Tokenomics",
-      href: "#tokenomics",
+      href: "/",
     },
     {
       label: "Roadmap",
@@ -75,9 +75,9 @@ const Navbar = () => {
             </div>
 
             <div className="hidden lg:flex items-center gap-8">
-              {NavItems.map((item) => (
+              {NavItems.map((item, index) => (
                 <Link
-                  key={item.href}
+                  key={index}
                   href={item.href}
                   className="text-[#444444] hover:text-[#FF4F3A] transition-colors duration-200 font-medium"
                 >
@@ -143,9 +143,9 @@ const Navbar = () => {
 
               <div className="flex-1 px-6 py-6">
                 <nav className="space-y-4">
-                  {NavItems.map((item) => (
+                  {NavItems.map((item, index) => (
                     <Link
-                      key={item.href}
+                      key={index}
                       href={item.href}
                       className="block text-lg text-[#444444] hover:text-black transition-colors duration-200 font-medium py-2"
                       onClick={toggleMobileMenu}

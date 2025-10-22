@@ -71,7 +71,7 @@ const RoadMap = () => {
   ];
 
   return (
-    <div className="mt-10 flex justify-center">
+    <div id="roadmap" className="scroll-mt-30 mt-10 flex justify-center">
       <div className="flex flex-col lg:flex-row w-full items-center bg-[#221235] rounded-4xl pt-6 lg:pt-0 justify-between xl:p-6 md:gap-6 min-h-[300px] overflow-hidden">
         <div>
           <h2
