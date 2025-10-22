@@ -10,13 +10,13 @@ const VoteToEarn = () => {
       className={` bg-white xl:py-12 px-4 sm:px-6 lg:px-8 z-10 flex flex-col  w-full ${AntaFont.className}`}
     >
       <div className="text-center">
-        <h2 className="text-[56px]">Vote-to-Earn </h2>
+        <h2 className="text-4xl  md:text-[56px] font-normal">Vote-to-Earn </h2>
         <span
-          className={`text-[24px] font-medium block ${RubikFont.className}`}
+          className={`text-xl md:text-[24px] font-medium block ${RubikFont.className}`}
         >
           Your Voice Matters — and Pays
         </span>
-        <p className={`text-[16px] ${RubikFont.className} mt-2`}>
+        <p className={`text-sm md:text-[16px] ${RubikFont.className} mt-2`}>
           By voting with $TIMES tokens, users shape the platform’s history. If
           your chosen artwork wins, you receive part of the auction profits. The
           more <br className="hidden xl:block" /> you engage, the more you earn.
@@ -31,7 +31,7 @@ const VoteToEarn = () => {
           quality={100}
         />
         <div
-          className={`bg-[#FFCDC7] -rotate-6 other-shadow rounded-full px-7 py-4 ${RubikFont.className} text-[16px] absolute bottom-0 text-center leading-4.5 font-normal`}
+          className={`bg-[#FFCDC7] -rotate-5 md:-rotate-6 other-shadow rounded-4xl md:rounded-full px-2 md:px-7 md:py-4 py-2 ${RubikFont.className} text-sm md:text-[16px] absolute -bottom-10  md:bottom-0 text-center leading-4.5 font-normal`}
         >
           <p>
             Artificial Intelligence curates daily news and ensures fair voting.

@@ -10,7 +10,7 @@ import VoteToEarn from "@/components/VoteToEarn/VoteToEarn";
 
 export default function Home() {
   return (
-    <div className="container px-2 xl:px-0 mx-auto">
+    <div className="container  xl:px-0 mx-auto">
       <Navbar />
       <main className="">
         <Hero />
@@ -21,7 +21,7 @@ export default function Home() {
         <EarlyBirdsAirdrop />
         <JoinCommunity />
       </main>
-      <footer className="">
+      <footer className="mx-2 lg:mx-0">
         <Footer />
       </footer>
     </div>

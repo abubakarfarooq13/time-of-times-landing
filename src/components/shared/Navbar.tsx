@@ -48,7 +48,7 @@ const Navbar = () => {
       <nav
         className={`fixed  ${
           isScrolled ? "top-4" : "top-0"
-        } left-4 right-4 xl:left-0 xl:right-0 z-50 transition-all duration-300  ${
+        } left-2 right-2 xl:left-0 xl:right-0 z-50 transition-all duration-300  ${
           OutfitFont.className
         }`}
       >

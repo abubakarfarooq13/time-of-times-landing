@@ -11,20 +11,20 @@ export function Tokenomics() {
     <section className="px-4 py-8 md:px-8 md:py-12 xl:px-12 lg:py-16">
       <div className=" mx-auto">
         <div className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-12 items-center relative">
-          <div className="flex items-center w-full justify-between">
-            <div className="flex flex-col justify-center lg:col-span-1">
+          <div className="flex flex-col md:flex-row items-center w-full justify-between">
+            <div className="flex flex-col items-center md:items-start justify-center lg:col-span-1">
               <h1
-                className={`text-[56px] lg:text-5xl xl:text-[56px] font-bold text-white mb-4 leading-16 ${AntaFont.className}`}
+                className={`text-center md:text-start text-4xl md:text-[56px] lg:text-5xl xl:text-[56px] font-bold text-white mb-1 md:mb-4 md:leading-16 ${AntaFont.className}`}
               >
                 $TIMES
                 <br />
                 TOKENOMICS
               </h1>
-              <p className="text-2xl lg:text-xl xl:text-2xl text-white mb-4 font-medium">
+              <p className="text-xl text-center md:text-start md:text-2xl lg:text-xl xl:text-2xl text-white mb-2 md:mb-4 font-medium">
                 Your Voice Matters — and Pays
               </p>
 
-              <div className=" mb-8 text-white text-[16px]">
+              <div className=" mb-4 md:mb-8 text-white text-[16px]">
                 <p>
                   <span className="font-semibold">Name:</span> Time of Times
                   Token
@@ -37,10 +37,9 @@ export function Tokenomics() {
                   1,000,000,000
                 </p>
               </div>
-
               <Button
                 variant="default"
-                className={`rounded-full max-w-max !px-6 !py-5.5  text-[16px] font-medium ${OutfitFont.className}`}
+                className={`rounded-full max-w-max !px-6 !py-5.5   md:text-[16px] font-medium ${OutfitFont.className}`}
               >
                 CHECK DETAILED TOKENOMICS{" "}
                 <ArrowUpRight
@@ -54,7 +53,7 @@ export function Tokenomics() {
               <PieChart />
             </div>
 
-            <div className="">
+            <div className="mt-6 md:mt-0">
               <DistributionLegend />
             </div>
           </div>

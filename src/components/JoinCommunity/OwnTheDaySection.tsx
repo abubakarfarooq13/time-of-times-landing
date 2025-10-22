@@ -6,14 +6,16 @@ import Image from "next/image";
 export function OwnTheDaySection() {
   return (
     <div className="border-2 border-black rounded-4xl p-8 lg:px-10 xl:px-12 overflow-hidden">
-      <div className="flex flex-col lg:flex-row justify-between gap-8 items-center">
+      <div className="flex flex-col lg:flex-row justify-center   md:justify-between gap-8 items-center">
         <div className="text-center lg:text-start">
           <h2
             className={`text-4xl md:text-[56px] font-normal  mb-4 ${AntaFont.className}`}
           >
             Own the Day!
           </h2>
-          <p className={`text-[16px] text-black   ${RubikFont.className}`}>
+          <p
+            className={`text-sm md:text-[16px] text-black   ${RubikFont.className}`}
+          >
             Every day leaves a mark – in headlines, in memories, in culture.
             With Time of Times, that mark
             <br className="hidden 2xl:block" /> becomes yours. We capture the
@@ -21,16 +23,18 @@ export function OwnTheDaySection() {
             <br className="hidden 2xl:block" /> preserved forever as a unique
             NFT.
           </p>
-          <p className={`text-[16px] text-black   ${RubikFont.className} mb-6`}>
+          <p
+            className={`text-sm md:text-[16px] text-black   ${RubikFont.className} mb-6`}
+          >
             By collecting these one-of-a-kind pieces, you don&apos;t just buy an
             image – you claim a moment
             <br className="hidden 2xl:block" /> in history. Each NFT is a living
             record, a piece of time that only one person can truly own.
           </p>
-          <div className="flex flex-col justify-center lg:justify-start sm:flex-row gap-4">
+          <div className="flex flex-col items-center justify-center lg:justify-start sm:flex-row gap-4">
             <Button
               variant="default"
-              className={`rounded-full max-w-max !px-6 !py-5.5  text-[16px] font-medium ${OutfitFont.className}`}
+              className={`rounded-full w-full md:max-w-max !px-6 !py-5.5  text-sm md:text-[16px] font-medium ${OutfitFont.className}`}
             >
               JOIN WAITLIST
               <ArrowUpRight
@@ -40,7 +44,7 @@ export function OwnTheDaySection() {
             </Button>
             <Button
               variant="default"
-              className={`rounded-full max-w-max !px-6 !py-5.5  text-[16px] font-medium ${OutfitFont.className}`}
+              className={`rounded-full w-full md:max-w-max !px-6 !py-5.5  text-sm md:text-[16px] font-medium ${OutfitFont.className}`}
             >
               JOIN TELEGRAM COMMUNITY
               <ArrowUpRight

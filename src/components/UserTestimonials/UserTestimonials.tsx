@@ -31,10 +31,10 @@ const testimonials = [
 
 export default function UserTestimonials() {
   return (
-    <section className="w-full pt-12 pb-20 px-4 sm:px-6 lg:px-8">
+    <section className="w-full lg:pt-4 xl:pt-12 pb-20 px-4 sm:px-6 lg:px-8">
       <div className=" mx-auto">
         <h2
-          className={`text-4xl sm:text-5xl font-bold text-center mb-12 sm:mb-16 text-foreground ${AntaFont.className}`}
+          className={`text-4xl  md:text-[56px] font-normal text-center mb-12 sm:mb-16 text-foreground ${AntaFont.className}`}
         >
           User Testimonials
         </h2>

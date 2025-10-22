@@ -4,10 +4,10 @@ import { RubikFont } from "@/lib/font";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#221235] rounded-4xl text-white mb-10 overflow-hidden flex w-full">
+    <footer className="bg-[#221235] rounded-4xl text-white mb-6 md:mb-10 overflow-hidden flex w-full">
       <div className=" lg:mx-auto px-12  lg:px-12 pb-8 pt-10   w-full">
-        <div className="flex justify-between gap-8 md:gap-12">
-          <div className="flex flex-col  items-start space-y-6">
+        <div className="flex  flex-col md:flex-row justify-center md:justify-between gap-8 md:gap-12">
+          <div className="flex flex-col items-center  md:items-start md:space-y-6">
             <div className="flex items-center space-x-2">
               <div className="text-2xl md:text-3xl font-bold tracking-wider">
                 <Image
@@ -20,7 +20,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center mt-2 md:mt-0 space-x-6">
               <a
                 href="https://twitter.com"
                 target="_blank"
@@ -83,7 +83,9 @@ export default function Footer() {
               </a>
             </div>
 
-            <div className={`${RubikFont.className}`}>
+            <div
+              className={`text-center md:text-start hidden md:block ${RubikFont.className}`}
+            >
               <p className="text-[#ff4e3b] font-semibold text-[16px]">
                 Contact us:
               </p>
@@ -109,9 +111,9 @@ export default function Footer() {
           </div>
 
           <div
-            className={`flex flex-col text-nowrap whitespace-nowrap space-y-4 ${RubikFont.className} text-[16px] xl:pr-30`}
+            className={`flex  flex-col text-nowrap whitespace-nowrap space-y-4 ${RubikFont.className} text-[16px] xl:pr-30`}
           >
-            <nav className="space-y-6">
+            <nav className="text-center md:text-start md:space-y-6 ">
               <Link
                 href="/community"
                 className="block text-white hover:text-[#ff4e3b] transition-colors"
@@ -151,7 +153,19 @@ export default function Footer() {
             </nav>
           </div>
         </div>
-
+        <div
+          className={`text-center md:text-start md:hidden block mt-2 md:mt-0 ${RubikFont.className}`}
+        >
+          <p className="text-[#ff4e3b] font-semibold text-[16px]">
+            Contact us:
+          </p>
+          <a
+            href="mailto:support@timeoftimes.com"
+            className="text-white transition-colors underline"
+          >
+            support@timeoftimes.com
+          </a>
+        </div>
         <div className="border-t border-white  my-8 md:mt-10 z-20 flex  relative"></div>
 
         <div

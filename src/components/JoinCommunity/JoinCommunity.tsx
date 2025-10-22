@@ -12,24 +12,24 @@ const JoinCommunity = () => {
       className={` bg-white xl:pt-12 px-4 sm:px-6 lg:px-8 z-10 flex flex-col  w-full ${AntaFont.className}`}
     >
       <div className="text-center">
-        <h2 className="text-[56px]">JOIN COMMUNITY</h2>
+        <h2 className="text-4xl md:text-[56px]">JOIN COMMUNITY</h2>
         <span
-          className={`text-[24px] font-medium block ${RubikFont.className}`}
+          className={`text-xl md:text-[24px] font-medium  block ${RubikFont.className}`}
         >
           Early followers get the most benefits
         </span>
       </div>
-      <section className="py-16 px-4 md:px-8 mt-10">
+      <section className="py-8 md:py-16 px-4 md:px-8 mt-10">
         <div className=" mx-auto">
           <FeatureCardsSection />
         </div>
       </section>
 
       <section className="xl:py-2 px-4 md:px-8 ">
-        <div className=" mx-auto flex justify-center gap-4">
+        <div className=" mx-auto flex justify-center items-center flex-col md:flex-row gap-4">
           <Button
             variant="default"
-            className={`rounded-full max-w-max !px-6 !py-5.5  text-[16px] font-medium ${OutfitFont.className}`}
+            className={`rounded-full w-full md:max-w-max !px-6 !py-5.5   text-[16px] font-medium ${OutfitFont.className}`}
           >
             Join Telegram
             <ArrowUpRight
@@ -39,7 +39,7 @@ const JoinCommunity = () => {
           </Button>
           <Button
             variant="default"
-            className={`rounded-full max-w-max !px-6 !py-5.5  text-[16px] font-medium ${OutfitFont.className}`}
+            className={`rounded-full w-full md:max-w-max !px-6 !py-5.5  text-[16px] font-medium ${OutfitFont.className}`}
           >
             Follow on X
             <ArrowUpRight
@@ -50,7 +50,7 @@ const JoinCommunity = () => {
         </div>
       </section>
 
-      <section className="mt-14 px-4 xl:px-8">
+      <section className="mt-8 md:mt-14 lg:px-4 xl:px-8">
         <div className=" mx-auto">
           <OwnTheDaySection />
         </div>
