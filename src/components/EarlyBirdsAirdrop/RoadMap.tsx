@@ -72,10 +72,10 @@ const RoadMap = () => {
 
   return (
     <div className="mt-10 flex justify-center">
-      <div className="flex flex-col lg:flex-row w-full items-center bg-[#221235] rounded-4xl pt-10 lg:pt-0 justify-between xl:p-6 gap-6 min-h-[300px] overflow-hidden">
+      <div className="flex flex-col lg:flex-row w-full items-center bg-[#221235] rounded-4xl pt-6 lg:pt-0 justify-between xl:p-6 gap-6 min-h-[300px] overflow-hidden">
         <div>
           <h2
-            className={`text-5xl xl:text-[56px] text-[#FF4F3A] ${AntaFont.className} ml-10`}
+            className={`text-[56px] lg:text-5xl xl:text-[56px] text-[#FF4F3A] ${AntaFont.className} lg:ml-10`}
           >
             Roadmap
           </h2>

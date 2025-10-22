@@ -9,7 +9,7 @@ import RoadMap from "./RoadMap";
 const EarlyBirdsAirdrop = () => {
   return (
     <div
-      className={` bg-white py-12 px-4 sm:px-6 lg:px-8 z-10 flex flex-col  w-full ${AntaFont.className}`}
+      className={` bg-white py-12 px-4 sm:px-6 lg:px-8 z-10 flex flex-col overflow-hidden  w-full ${AntaFont.className}`}
     >
       <div className="text-center">
         <h2 className="text-[56px]"> Early Birds Airdrop</h2>

@@ -10,7 +10,7 @@ import VoteToEarn from "@/components/VoteToEarn/VoteToEarn";
 
 export default function Home() {
   return (
-    <div className="container px-4 xl:px-0 mx-auto">
+    <div className="container px-2 xl:px-0 mx-auto">
       <Navbar />
       <main className="">
         <Hero />

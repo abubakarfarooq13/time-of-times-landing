@@ -188,7 +188,7 @@ export default function EveryDayIsMinted() {
           ))}
         </div>
       </div>
-      <div className="flex justify-between items-center  mt-[200px] xl:mt-[250px] gap-8">
+      <div className="flex justify-between flex-col md:flex-row items-center  mt-[200px] xl:mt-[250px] gap-8">
         <div className="bg-[#FF4F3A] rounded-4xl p-6 relative w-full">
           <div className="absolute w-[250px] lg:w-auto -top-[150px] lg:-top-[140px] xl:-top-[180px] left-1/2 -translate-x-1/2">
             <Image
@@ -217,7 +217,7 @@ export default function EveryDayIsMinted() {
             </p>
           </div>
         </div>
-        <div className="bg-[#221235] rounded-4xl p-6 relative w-full">
+        <div className="bg-[#221235] rounded-4xl p-6 mt-44 md:mt-0 relative w-full">
           <div className="absolute w-[250px] lg:w-auto -top-[150px] lg:-top-[140px] xl:-top-[180px] left-1/2 -translate-x-1/2">
             <Image
               src="/everydayisminted/man-2.png"
