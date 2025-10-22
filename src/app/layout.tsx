@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const baseUrl = "http://135.181.116.96:3005/";
+const baseUrl = "https://time-of-times.vercel.app/";
 // const baseUrl = "http://localhost:3000";
 const brandName = "Time of Times";
 
@@ -12,7 +12,6 @@ export const metadata: Metadata = {
   },
   description:
     "Today's News Carved in NFT. Every day, one global event is captured as a unique, historical collectible NFT, featuring AI and artist-created artwork. Create, vote, trade, and hold 'NFTs of the Day'.",
-
   keywords: [
     "Historically Valuable NFTs",
     "NFT of the Day",
@@ -26,7 +25,6 @@ export const metadata: Metadata = {
     "Daily NFT",
     "Unique NFT",
   ],
-
   authors: [{ name: "Community Team", url: baseUrl }],
   creator: brandName,
 
@@ -37,7 +35,7 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      noimageindex: false,
+      noimageindex: true,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
@@ -86,9 +84,10 @@ export const metadata: Metadata = {
 
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-icon.png",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
   },
+  manifest: `${baseUrl}/manifest.json`,
 };
 
 export default function RootLayout({
