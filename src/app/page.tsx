@@ -12,7 +12,7 @@ import VoteToEarn from "@/components/VoteToEarn/VoteToEarn";
 
 export default function Home() {
   return (
-    <div className="container  overflow-hidden xl:overflow-visible xl:px-0 mx-auto">
+    <div className="container  overflow-hidden 2xl:overflow-visible xl:px-0 mx-auto">
       <Navbar />
       <main className="">
         <Hero />
@@ -23,7 +23,7 @@ export default function Home() {
         <EarlyBirdsAirdrop />
         <JoinCommunity />
       </main>
-      <footer className="mx-2 xl:mx-0">
+      <footer className="mx-2 2xl:mx-0">
         <Footer />
       </footer>
     </div>
