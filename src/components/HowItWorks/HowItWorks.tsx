@@ -19,30 +19,30 @@ const HowItWorks = () => {
       hr: "1 hr",
       details: "France & Britain refine UN Gaza force plans",
       top: "top-8",
-      left: "",
+      left: "left-6 md:left-auto",
     },
     {
       hr: "5 hr",
       details: "Japan to vote on next prime minister next week",
       top: "top-30",
-      left: "left-1/2",
+      left: "left-22 md:left-1/2",
     },
     {
       hr: "3 hr",
       details: "Putin meets top officials after call with Trump",
-      top: "top-76",
+      top: "top-56 md:top-76",
       left: "left-1/4",
     },
     {
       hr: "6 hr",
       details: "IMF raises global growth outlook, warns of trade risks",
-      top: "top-92",
-      left: "left-42",
+      top: "top-72 md:top-92",
+      left: "left-14 md:left-42",
     },
     {
       hr: "7 hr",
       details: "Oil outlook: surplus risk and price pressure",
-      top: "bottom-6",
+      top: "bottom-18 md:bottom-6",
       left: "left-6",
     },
   ];
@@ -88,10 +88,10 @@ const HowItWorks = () => {
       const current = `.step-${i}-content`;
       const next = `.step-${i + 1}-content`;
 
-      tl.to(current, { opacity: 0, y: -50, duration: 0.5 })
+      tl.to(current, { opacity: 0, y: -50, duration: 0.3 })
         .set(current, { display: "none" })
         .set(next, { display: "block", opacity: 0, y: 50 })
-        .to(next, { opacity: 1, y: 0, duration: 0.6 }, "<");
+        .to(next, { opacity: 1, y: 0, duration: 0.3 }, "<");
     }
 
     ScrollTrigger.create({
@@ -138,12 +138,12 @@ const HowItWorks = () => {
   return (
     <div className="hero-gsap relative mx-2 2xl:mx-0 md:pt-10 lg:pt-16 md:pb-10 flex flex-col ">
       <h1
-        className={`${AntaFont.className} text-4xl  md:text-[56px] font-normal text-center mt-12 z-10 bg-white xl:bg-transparent`}
+        className={`${AntaFont.className} text-4xl  md:text-[56px] font-normal text-center mt-23 md:mt-12 z-10 bg-white xl:bg-transparent`}
       >
         How it works
       </h1>
-      <div className="flex   h-full  w-full ">
-        <div className="relative   flex items-center h-full ">
+      <div className="flex   h-full  w-full md:flex-row flex-col">
+        <div className="relative   flex md:items-center md:h-full ">
           <div className="h-[800px] w-[800px] absolute -top-30 -left-50 border-r-2 border-[#C0C0C0]    border-dashed  rounded-full hidden lg:block">
             <div className="relative h-[800px]">
               <div
@@ -190,11 +190,11 @@ const HowItWorks = () => {
               </div>
             </div>
           </div>
-          <div className="w-full h-full ml-14 mt-20">
+          <div className="w-full  md:h-full md:ml-14 mt-20">
             <div className="  step-1-content">
-              <div className="relative  flex justify-center items-center w-[300px] h-[550px]">
+              <div className="relative  flex justify-center items-center md:w-[300px] md:h-[550px] h-[450px] ">
                 <div
-                  className="absolute left-16  w-[250px] h-[250px]  rounded-full border-none bg-[#FFFAF9]"
+                  className="absolute md:left-16  w-[250px] h-[250px]  rounded-full border-none bg-[#FFFAF9]"
                   style={{
                     animation: "pulse-expand 2s ease-out infinite",
                     animationDelay: "1s",
@@ -203,14 +203,14 @@ const HowItWorks = () => {
                 />
 
                 <div
-                  className="absolute left-22.5 w-[200px] h-[200px] rounded-full border-none bg-[#FFEDEA] "
+                  className="absolute md:left-22.5 w-[200px] h-[200px] rounded-full border-none bg-[#FFEDEA] "
                   style={{
                     animation: "pulse-expand 2s ease-out infinite",
                     animationDelay: "2s",
                     opacity: 0,
                   }}
                 />
-                <div className="w-[150px] z-10 h-[150px] bg-[#FFCEC8] rounded-full ml-20"></div>
+                <div className="w-[150px] z-10 h-[150px] bg-[#FFCEC8] rounded-full md:ml-20"></div>
               </div>
               {news.map((item, index) => (
                 <div
@@ -227,8 +227,8 @@ const HowItWorks = () => {
               ))}
             </div>
             <div className="  step-2-content">
-              <div className="relative  flex justify-center items-center w-[400px] h-[550px]">
-                <div className="absolute top-0 z-5 -right-14">
+              <div className="relative  flex justify-center items-center md:w-[400px] h-[450px] md:h-[550px]">
+                <div className="absolute top-0 w-[200px] md:w-[300px]  z-5 right-2 md:-right-14">
                   <Image
                     src="/howitworks/2a.png"
                     alt="Step 2"
@@ -236,7 +236,7 @@ const HowItWorks = () => {
                     height={300}
                   />
                 </div>
-                <div className="absolute bottom-0 left-0">
+                <div className="absolute md:bottom-0 left-8 bottom-20 md:left-0  w-[200px] md:w-[300px]">
                   <Image
                     src="/howitworks/2b.png"
                     alt="Step 2"
@@ -247,7 +247,7 @@ const HowItWorks = () => {
               </div>
             </div>
             <div className="  step-3-content">
-              <div className="relative  flex justify-center items-center w-[400px] h-[550px]">
+              <div className="relative  -mt-20 md:-mt-0 flex justify-center items-center md:w-[400px] h-[450px] md:h-[550px]">
                 <div className="">
                   <Image
                     src="/howitworks/3.png"
@@ -259,7 +259,7 @@ const HowItWorks = () => {
               </div>
             </div>
             <div className="  step-4-content">
-              <div className="relative  flex justify-center items-center w-[400px] h-[550px]">
+              <div className="relative  -mt-16 md:mt-0 flex justify-center items-center md:w-[400px] h-[450px] md:h-[550px]">
                 <div className="">
                   <Image
                     src="/howitworks/4.png"
@@ -271,8 +271,8 @@ const HowItWorks = () => {
               </div>
             </div>
             <div className="  step-5-content">
-              <div className="relative  flex justify-center items-center w-[400px] h-[550px]">
-                <div className="">
+              <div className="relative  -mt-16 md:mt-0 flex justify-center items-center md:w-[400px] h-[450px] md:h-[550px]">
+                <div className="w-[270px] md:w-[400px]">
                   <Image
                     src="/howitworks/5.png"
                     alt="Step 5"
@@ -283,7 +283,7 @@ const HowItWorks = () => {
               </div>
             </div>
             <div className="  step-6-content">
-              <div className="relative  flex justify-center items-center w-[430px]  h-[550px]">
+              <div className="relative  -mt-16 md:mt-0 flex justify-center items-center md:w-[430px]  md:h-[550px] h-[450px]">
                 <div className="">
                   <Image
                     src="/howitworks/6.png"
@@ -296,8 +296,7 @@ const HowItWorks = () => {
             </div>
           </div>
         </div>
-
-        <div className="lg:ml-[300px] xl:ml-[380px] mt-[220px] step-1-content">
+        <div className="lg:ml-[300px] text-center md:text-start xl:ml-[380px] md:mt-[220px] step-1-content">
           <div
             className={`flex flex-col ${TomorrowFont.className} text-[32px] font-medium `}
           >
@@ -307,7 +306,7 @@ const HowItWorks = () => {
             </span>
           </div>
         </div>
-        <div className=" lg:ml-[200px] xl:ml-[280px] mt-[400px] lg:mt-[220px] step-2-content hidden">
+        <div className=" text-center md:text-start lg:ml-[200px] xl:ml-[280px] md:mt-[400px] lg:mt-[220px] step-2-content hidden">
           <div
             className={`flex flex-col ${TomorrowFont.className} text-[32px] font-medium `}
           >
@@ -318,7 +317,7 @@ const HowItWorks = () => {
             </span>
           </div>
         </div>
-        <div className="-ml-[100px] lg:ml-[200px] xl:ml-[280px] mt-[220px] step-3-content hidden">
+        <div className="text-center md:text-start mt-10 md:-ml-[100px] lg:ml-[200px] xl:ml-[280px] md:mt-[220px] step-3-content hidden">
           <div
             className={`flex flex-col ${TomorrowFont.className} text-[32px] font-medium `}
           >
@@ -329,7 +328,7 @@ const HowItWorks = () => {
             </span>
           </div>
         </div>
-        <div className="lg:ml-[200px] xl:ml-[280px] mt-[220px] step-4-content hidden">
+        <div className="lg:ml-[200px] text-center md:text-start xl:ml-[280px] md:mt-[220px] step-4-content hidden">
           <div
             className={`flex flex-col ${TomorrowFont.className} text-[32px] font-medium `}
           >
@@ -340,7 +339,7 @@ const HowItWorks = () => {
             </span>
           </div>
         </div>
-        <div className="-ml-[50px] lg:ml-[200px] xl:ml-[280px] mt-[220px] step-5-content hidden">
+        <div className="md:-ml-[50px] lg:ml-[200px] text-center md:text-start xl:ml-[280px] md:mt-[220px] step-5-content hidden">
           <div
             className={`flex flex-col ${TomorrowFont.className} text-[32px] font-medium `}
           >
@@ -351,7 +350,7 @@ const HowItWorks = () => {
             </span>
           </div>
         </div>
-        <div className="-ml-[80px] lg:ml-[200px] xl:ml-[260px] mt-[220px]  step-6-content hidden">
+        <div className="text-center md:text-start md:-ml-[80px] lg:ml-[200px] xl:ml-[260px] md:mt-[220px]  step-6-content hidden">
           <div
             className={`flex flex-col ${TomorrowFont.className} text-[32px] font-medium `}
           >
