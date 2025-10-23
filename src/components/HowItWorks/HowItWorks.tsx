@@ -76,7 +76,7 @@ const HowItWorks = () => {
       scrollTrigger: {
         trigger: ".hero-gsap",
         start: "top top",
-        end: `+=${totalSteps * 200}`,
+        end: `+=${totalSteps * 100}`,
         scrub: 0.3,
         pin: true,
         anticipatePin: 1,
@@ -138,7 +138,7 @@ const HowItWorks = () => {
   return (
     <div className="hero-gsap relative mx-2 2xl:mx-0 md:pt-10 lg:pt-16 md:pb-10 flex flex-col ">
       <h1
-        className={`${AntaFont.className} text-4xl  md:text-[56px] font-normal text-center mt-23 md:mt-12 z-10 bg-white xl:bg-transparent`}
+        className={`${AntaFont.className} text-4xl  md:text-[56px] font-normal text-center mt-23 md:mt-12 z-10 md:bg-white xl:bg-transparent`}
       >
         How it works
       </h1>
