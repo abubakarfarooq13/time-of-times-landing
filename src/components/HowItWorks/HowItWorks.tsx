@@ -76,10 +76,15 @@ const HowItWorks = () => {
       scrollTrigger: {
         trigger: ".hero-gsap",
         start: "top top",
-        end: `+=${totalSteps * 100}`,
+        end: `+=${totalSteps * 150}`,
         scrub: 0.3,
         pin: true,
         anticipatePin: 1,
+        snap: {
+          snapTo: "labels",
+          duration: { min: 0.3, max: 0.5 },
+          ease: "power1.inOut",
+        },
       },
       defaults: { ease: "power2.out" },
     });
@@ -87,45 +92,42 @@ const HowItWorks = () => {
     for (let i = 1; i < totalSteps; i++) {
       const current = `.step-${i}-content`;
       const next = `.step-${i + 1}-content`;
-
-      tl.to(current, { opacity: 0.1, y: -50, duration: 0.3 })
-        .set(current, { display: "none" })
-        .set(next, { display: "block", opacity: 0.1, y: 50 })
-        .to(next, { opacity: 1, y: 0, duration: 0.3 }, "<");
+      tl.addLabel(`step${i}`);
+      tl.to(current, { opacity: 0.3, y: -50, duration: 0.3 });
+      if (next) {
+        tl.set(current, { display: "none" });
+        tl.set(next, { display: "block", opacity: 0.3, y: 50 });
+        tl.to(next, { opacity: 1, y: 0, duration: 0.3 });
+      }
     }
+
+    tl.addLabel("endHold");
 
     ScrollTrigger.create({
       trigger: ".hero-gsap",
       start: "top top",
-      end: `+=${totalSteps * 100}`,
-      scrub: 0.3,
+      end: `+=${totalSteps * 150}`,
+      scrub: true,
       onUpdate: (self) => {
         const progressPerStep = 1 / (totalSteps - 1);
-        const currentIndex = Math.round(self.progress / progressPerStep) + 1;
-        const clampedIndex = Math.min(currentIndex, totalSteps);
+        const rawIndex = Math.floor(self.progress / progressPerStep) + 1;
+        const step = Math.min(Math.max(rawIndex, 1), totalSteps);
 
         gsap.to(
           ".number-1 div, .number-2 div, .number-3 div, .number-4 div, .number-5 div, .number-6 div",
           {
             backgroundColor: "#E5E5E5",
             color: "#000",
-            width: 40,
-            height: 40,
-            fontSize: "16px",
             duration: 0.3,
             ease: "power2.out",
           }
         );
 
-        gsap.to(`.number-${clampedIndex} div`, {
+        gsap.to(`.number-${step} div`, {
           backgroundColor: "#FF4F3A",
           color: "#fff",
-          width: 40,
-          height: 40,
-          fontSize: "16px",
           duration: 0.3,
           ease: "power2.out",
-          overwrite: "auto",
         });
       },
     });
