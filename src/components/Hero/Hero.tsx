@@ -15,7 +15,7 @@ const Hero = () => {
     },
   ];
   return (
-    <div className="relative overflow-hidden mt-1 md:mt-4 lg:mt-0  rounded-4xl hero-bg-shadow z-10 mx-2 2xl:mx-0">
+    <div className="relative overflow-hidden mt-1 md:mt-4 lg:mt-0  rounded-4xl hero-bg-shadow z-10 mx-2 ">
       <div className=" hero-bg rounded-4xl  w-full  xl:min-h-[650px] ">
         <motion.div
           initial={{ y: -80, opacity: 0 }}

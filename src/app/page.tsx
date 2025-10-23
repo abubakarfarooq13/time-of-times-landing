@@ -23,7 +23,7 @@ export default function Home() {
         <EarlyBirdsAirdrop />
         <JoinCommunity />
       </main>
-      <footer className="mx-2 2xl:mx-0">
+      <footer className="mx-2 ">
         <Footer />
       </footer>
     </div>
