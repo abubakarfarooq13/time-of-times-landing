@@ -192,7 +192,7 @@ const HowItWorks = () => {
           </div>
           <div className="w-full  md:h-full md:ml-14 mt-20">
             <div className="  step-1-content">
-              <div className="relative  flex justify-center items-center md:w-[300px] md:h-[550px] h-[450px] ">
+              <div className="relative -mt-16 md:mt-0 flex justify-center items-center md:w-[300px] md:h-[550px] h-[450px] ">
                 <div
                   className="absolute md:left-16  w-[250px] h-[250px]  rounded-full border-none bg-[#FFFAF9]"
                   style={{
@@ -227,7 +227,7 @@ const HowItWorks = () => {
               ))}
             </div>
             <div className="  step-2-content">
-              <div className="relative  flex justify-center items-center md:w-[400px] h-[450px] md:h-[550px]">
+              <div className="relative  -mt-10 md:mt-0 flex justify-center items-center md:w-[400px] h-[450px] md:h-[550px]">
                 <div className="absolute top-0 w-[200px] md:w-[300px]  z-5 right-2 md:-right-14">
                   <Image
                     src="/howitworks/2a.png"
@@ -248,7 +248,7 @@ const HowItWorks = () => {
             </div>
             <div className="  step-3-content">
               <div className="relative  -mt-20 md:-mt-0 flex justify-center items-center md:w-[400px] h-[450px] md:h-[550px]">
-                <div className="">
+                <div className="w-[250px] md:w-[300px]">
                   <Image
                     src="/howitworks/3.png"
                     alt="Step 3"
@@ -283,7 +283,7 @@ const HowItWorks = () => {
               </div>
             </div>
             <div className="  step-6-content">
-              <div className="relative  -mt-16 md:mt-0 flex justify-center items-center md:w-[430px]  md:h-[550px] h-[450px]">
+              <div className="relative  -mt-20 md:mt-0 flex justify-center items-center md:w-[430px]  md:h-[550px] h-[450px]">
                 <div className="">
                   <Image
                     src="/howitworks/6.png"
@@ -296,7 +296,7 @@ const HowItWorks = () => {
             </div>
           </div>
         </div>
-        <div className="lg:ml-[300px] text-center md:text-start xl:ml-[380px] md:mt-[220px] step-1-content">
+        <div className="lg:ml-[300px] -mt-6 text-center md:text-start xl:ml-[380px] md:mt-[220px] step-1-content">
           <div
             className={`flex flex-col ${TomorrowFont.className} text-[32px] font-medium `}
           >
@@ -306,7 +306,7 @@ const HowItWorks = () => {
             </span>
           </div>
         </div>
-        <div className=" text-center md:text-start lg:ml-[200px] xl:ml-[280px] md:mt-[400px] lg:mt-[220px] step-2-content hidden">
+        <div className=" text-center md:text-start -mt-10  lg:ml-[200px] xl:ml-[280px] md:mt-[400px] lg:mt-[220px] step-2-content hidden">
           <div
             className={`flex flex-col ${TomorrowFont.className} text-[32px] font-medium `}
           >
@@ -317,7 +317,7 @@ const HowItWorks = () => {
             </span>
           </div>
         </div>
-        <div className="text-center md:text-start mt-10 md:-ml-[100px] lg:ml-[200px] xl:ml-[280px] md:mt-[220px] step-3-content hidden">
+        <div className="text-center  md:text-start  md:-ml-[100px] lg:ml-[200px] xl:ml-[280px] md:mt-[220px] step-3-content hidden">
           <div
             className={`flex flex-col ${TomorrowFont.className} text-[32px] font-medium `}
           >
@@ -328,7 +328,7 @@ const HowItWorks = () => {
             </span>
           </div>
         </div>
-        <div className="lg:ml-[200px] text-center md:text-start xl:ml-[280px] md:mt-[220px] step-4-content hidden">
+        <div className="lg:ml-[200px] -mt-6 text-center md:text-start xl:ml-[280px] md:mt-[220px] step-4-content hidden">
           <div
             className={`flex flex-col ${TomorrowFont.className} text-[32px] font-medium `}
           >
@@ -339,7 +339,7 @@ const HowItWorks = () => {
             </span>
           </div>
         </div>
-        <div className="md:-ml-[50px] lg:ml-[200px] text-center md:text-start xl:ml-[280px] md:mt-[220px] step-5-content hidden">
+        <div className="md:-ml-[50px] -mt-6 lg:ml-[200px] text-center md:text-start xl:ml-[280px] md:mt-[220px] step-5-content hidden">
           <div
             className={`flex flex-col ${TomorrowFont.className} text-[32px] font-medium `}
           >
@@ -350,7 +350,7 @@ const HowItWorks = () => {
             </span>
           </div>
         </div>
-        <div className="text-center md:text-start md:-ml-[80px] lg:ml-[200px] xl:ml-[260px] md:mt-[220px]  step-6-content hidden">
+        <div className="text-center -mt-10 md:text-start md:-ml-[80px] lg:ml-[200px] xl:ml-[260px] md:mt-[220px]  step-6-content hidden">
           <div
             className={`flex flex-col ${TomorrowFont.className} text-[32px] font-medium `}
           >
