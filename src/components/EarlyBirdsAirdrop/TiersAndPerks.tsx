@@ -26,7 +26,7 @@ const TiersAndPerks = () => {
         <div className="flex items-center mt-8 lg:mt-0">
           <div
             data-aos="fade-left"
-            data-aos-delay="500"
+            data-aos-delay="100"
             className="text-center"
           >
             <div
@@ -42,7 +42,7 @@ const TiersAndPerks = () => {
           </div>
           <div
             data-aos="fade-left"
-            data-aos-delay="1000"
+            data-aos-delay="200"
             className="text-center -ml-2 md:-ml-4"
           >
             <div
@@ -58,7 +58,7 @@ const TiersAndPerks = () => {
           </div>
           <div
             data-aos="fade-left"
-            data-aos-delay="1500"
+            data-aos-delay="300"
             className="text-center -ml-2 md:-ml-4"
           >
             <div

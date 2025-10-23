@@ -88,16 +88,16 @@ const HowItWorks = () => {
       const current = `.step-${i}-content`;
       const next = `.step-${i + 1}-content`;
 
-      tl.to(current, { opacity: 0, y: -50, duration: 0.3 })
+      tl.to(current, { opacity: 0.1, y: -50, duration: 0.3 })
         .set(current, { display: "none" })
-        .set(next, { display: "block", opacity: 0, y: 50 })
+        .set(next, { display: "block", opacity: 0.1, y: 50 })
         .to(next, { opacity: 1, y: 0, duration: 0.3 }, "<");
     }
 
     ScrollTrigger.create({
       trigger: ".hero-gsap",
       start: "top top",
-      end: `+=${totalSteps * 200}`,
+      end: `+=${totalSteps * 100}`,
       scrub: 0.3,
       onUpdate: (self) => {
         const progressPerStep = 1 / (totalSteps - 1);

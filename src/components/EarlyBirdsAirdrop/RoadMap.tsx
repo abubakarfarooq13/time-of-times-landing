@@ -85,7 +85,7 @@ const RoadMap = () => {
           {roadmap.map((item, index) => (
             <div
               data-aos="fade-up"
-              data-aos-delay={index * 200}
+              data-aos-delay={index * 50}
               key={index}
               className={`${RubikFont.className} absolute flex flex-col gap-2 ${item.top} ${item.left} ${item.right} ${item.bottom}`}
             >
