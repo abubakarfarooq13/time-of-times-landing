@@ -15,7 +15,7 @@ export function Tokenomics() {
             <div className="flex flex-col items-center md:items-start justify-center lg:col-span-1">
               <h1
                 data-aos="fade-left"
-                className={`text-center md:text-start text-4xl md:text-[56px] lg:text-5xl xl:text-[44px] font-semibold text-white mb-1 md:mb-2 md:leading-14 ${TomorrowFont.className}`}
+                className={`text-center md:text-start text-4xl md:text-[48px] lg:text-5xl xl:text-[44px] font-semibold text-white mb-1 md:mb-2 md:leading-14 ${TomorrowFont.className}`}
               >
                 $TIMES
                 <br />

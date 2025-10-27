@@ -18,7 +18,7 @@ export function FairPlayEconomy() {
             <div className="lg:col-span-1 flex flex-col justify-center items-center lg:items-start">
               <h3
                 data-aos="fade-left"
-                className={`text-2xl md:text-[56px] lg:text-5xl xl:text-[48px] leading-14 font-medium text-black mb-4 ${TomorrowFont.className}`}
+                className={`text-3xl md:text-[48px] lg:text-5xl xl:text-[48px] leading-14 font-medium text-black mb-4 ${TomorrowFont.className}`}
               >
                 Distribution&nbsp;
                 <br className="hidden lg:block" />

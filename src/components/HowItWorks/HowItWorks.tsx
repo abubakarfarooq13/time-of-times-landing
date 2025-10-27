@@ -140,7 +140,7 @@ const HowItWorks = () => {
   return (
     <div className="hero-gsap relative mx-2 2xl:mx-0 md:pt-10 lg:pt-16 md:pb-10 flex flex-col ">
       <h1
-        className={`${AntaFont.className} text-4xl  md:text-[56px] font-normal text-center mt-23 md:mt-12 z-10 md:bg-transparent xl:bg-transparent`}
+        className={`${TomorrowFont.className} text-4xl  md:text-[44px] font-semibold text-center mt-23 md:mt-12 z-10 md:bg-transparent xl:bg-transparent`}
       >
         How it works
       </h1>

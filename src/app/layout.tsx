@@ -100,7 +100,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        <meta name="theme-color" content="#FF4F3A" />
+        <meta name="theme-color" content="#9BEFE3" />
       </head>
       <body className={` antialiased`}>
         <ClientThemeProvider>
