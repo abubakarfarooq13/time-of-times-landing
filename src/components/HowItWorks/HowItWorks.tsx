@@ -124,8 +124,8 @@ const HowItWorks = () => {
         );
 
         gsap.to(`.number-${step} div`, {
-          backgroundColor: "#FF4F3A",
-          color: "#fff",
+          backgroundColor: "#9BEFE3",
+          color: "#000000",
           duration: 0.3,
           ease: "power2.out",
         });
@@ -140,7 +140,7 @@ const HowItWorks = () => {
   return (
     <div className="hero-gsap relative mx-2 2xl:mx-0 md:pt-10 lg:pt-16 md:pb-10 flex flex-col ">
       <h1
-        className={`${AntaFont.className} text-4xl  md:text-[56px] font-normal text-center mt-23 md:mt-12 z-10 md:bg-white xl:bg-transparent`}
+        className={`${AntaFont.className} text-4xl  md:text-[56px] font-normal text-center mt-23 md:mt-12 z-10 md:bg-transparent xl:bg-transparent`}
       >
         How it works
       </h1>
@@ -196,7 +196,7 @@ const HowItWorks = () => {
             <div className="  step-1-content">
               <div className="relative -mt-16 md:mt-0 flex justify-center items-center md:w-[300px] md:h-[550px] h-[450px] ">
                 <div
-                  className="absolute md:left-16  w-[250px] h-[250px]  rounded-full border-none bg-[#FFFAF9]"
+                  className="absolute md:left-16  w-[250px] h-[250px]  rounded-full border-none bg-[#FF4F3A]/30"
                   style={{
                     animation: "pulse-expand 2s ease-out infinite",
                     animationDelay: "1s",
@@ -205,14 +205,14 @@ const HowItWorks = () => {
                 />
 
                 <div
-                  className="absolute md:left-22.5 w-[200px] h-[200px] rounded-full border-none bg-[#FFEDEA] "
+                  className="absolute md:left-22.5 w-[200px] h-[200px] rounded-full border-none bg-[#FF4F3A]/40 "
                   style={{
                     animation: "pulse-expand 2s ease-out infinite",
                     animationDelay: "2s",
                     opacity: 0,
                   }}
                 />
-                <div className="w-[150px] z-10 h-[150px] bg-[#FFCEC8] rounded-full md:ml-20"></div>
+                <div className="w-[150px] z-10 h-[150px] bg-[#FF4F3A] rounded-full md:ml-20"></div>
               </div>
               {news.map((item, index) => (
                 <div

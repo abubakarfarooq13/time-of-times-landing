@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { OutfitFont } from "@/lib/font";
+import { OutfitFont, TomorrowFont } from "@/lib/font";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -44,32 +44,34 @@ const Navbar = () => {
   };
 
   return (
-    <motion.div
-      initial={{ y: -80, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+    <div
+
+    // className="bg-white dark:bg-white"
     >
-      <nav
+      <motion.nav
+        initial={{ y: -80, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ ease: "easeOut" }}
         className={`fixed  ${
-          isScrolled ? "top-4" : "top-0"
-        } left-2 right-2  z-50 transition-all duration-300  ${
-          OutfitFont.className
-        }`}
+          isScrolled
+            ? "top-4 left-2 right-2 xl:left-0 xl:right-0 "
+            : "top-0 left-0 right-0 bg-white dark:bg-white"
+        }   z-50 transition-all duration-300  ${OutfitFont.className}`}
       >
         <div
-          className={`container mx-auto lg:px-0 transition-all duration-300 ${
+          className={`container  mx-auto lg:px-0 transition-all duration-300 ${
             isScrolled
-              ? "bg-white rounded-full backdrop-blur-md other-shadow  py-2 !px-4 "
-              : "bg-transparent  py-4 lg:py-6"
+              ? " rounded-full bg-white backdrop-blur-md other-shadow  py-2 lg:py-4 !px-4 "
+              : "bg-transparent !px-4 xl:!px-0  py-2 lg:py-4"
           }`}
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <Image
-                src="/logo.png"
+                src="/logon.png"
                 alt="logo"
-                width={isScrolled ? 80 : 100}
-                height={isScrolled ? 80 : 100}
+                width={isScrolled ? 100 : 130}
+                height={isScrolled ? 100 : 130}
                 className="transition-all duration-300"
               />
             </div>
@@ -79,29 +81,35 @@ const Navbar = () => {
                 <Link
                   key={index}
                   href={item.href}
-                  className="text-[#444444] hover:text-[#FF4F3A] transition-colors duration-200 font-medium"
+                  className="relative text-[#444444] hover:text-black transition-colors duration-200 font-medium group"
                 >
                   {item.label}
+                  <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#9BEFE3] transition-all duration-300 group-hover:left-0 group-hover:w-full"></span>
                 </Link>
               ))}
             </div>
 
-            <div className="hidden lg:flex items-center gap-4">
-              <Button variant="default" className="rounded-full !pl-4 !pr-2">
+            <div
+              className={`hidden lg:flex items-center gap-4 ${TomorrowFont.className}`}
+            >
+              <Button
+                variant="default"
+                className="rounded-full dark:bg-[#9BEFE3] !pl-4 !pr-2"
+              >
                 Join Community
                 <ArrowUpRight
                   strokeWidth={2.5}
-                  className="!h-4.5 !w-4.5 text-black p-0.5 bg-white rounded-full"
+                  className="!h-4.5 !w-4.5 text-black dark:text-[#9BEFE3] p-0.5 bg-white dark:bg-black rounded-full "
                 />
               </Button>
               <Button
                 variant="outline"
-                className="rounded-full border-2 !pl-4 !pr-2"
+                className="rounded-full border-2 dark:border-black dark:text-black !pl-4 !pr-2"
               >
                 Join Waitlist
                 <ArrowUpRight
                   strokeWidth={2.5}
-                  className="!h-4.5 !w-4.5 text-white p-0.5 bg-black rounded-full"
+                  className="!h-4.5 !w-4.5  text-white p-0.5 bg-black rounded-full"
                 />
               </Button>
             </div>
@@ -121,7 +129,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      </nav>
+      </motion.nav>
 
       <AnimatePresence>
         {isMobileMenuOpen && (
@@ -158,7 +166,7 @@ const Navbar = () => {
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.2, duration: 0.4, ease: "easeOut" }}
                 >
-                  <Image src="/logo.png" alt="logo" width={80} height={80} />
+                  <Image src="/logon.png" alt="logo" width={100} height={100} />
                   <button
                     onClick={toggleMobileMenu}
                     className="p-2 rounded-md text-[#444444] hover:text-black hover:bg-gray-100 transition-colors duration-200"
@@ -209,7 +217,7 @@ const Navbar = () => {
                 </motion.div>
 
                 <motion.div
-                  className="p-6 border-t space-y-4"
+                  className={`p-6 border-t space-y-4 ${TomorrowFont.className}`}
                   initial={{ y: 30, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.6, duration: 0.4, ease: "easeOut" }}
@@ -221,13 +229,13 @@ const Navbar = () => {
                   >
                     <Button
                       variant="default"
-                      className="w-full rounded-full !pl-4 !pr-2"
+                      className="w-full dark:bg-[#9BEFE3] rounded-full !pl-4 !pr-2"
                       onClick={toggleMobileMenu}
                     >
                       Join Community
                       <ArrowUpRight
                         strokeWidth={2.5}
-                        className="!h-4.5 !w-4.5 text-black p-0.5 bg-white rounded-full"
+                        className="!h-4.5 !w-4.5 text-[#9BEFE3] p-0.5 bg-black rounded-full"
                       />
                     </Button>
                   </motion.div>
@@ -238,7 +246,7 @@ const Navbar = () => {
                   >
                     <Button
                       variant="outline"
-                      className="w-full rounded-full border-2 !pl-4 !pr-2"
+                      className="w-full rounded-full border-2 !border-black text-black !pl-4 !pr-2"
                       onClick={toggleMobileMenu}
                     >
                       Join Waitlist
@@ -255,8 +263,8 @@ const Navbar = () => {
         )}
       </AnimatePresence>
 
-      <div className="h-24 lg:h-28" />
-    </motion.div>
+      {/* <div className="h-24 lg:h-28" /> */}
+    </div>
   );
 };
 

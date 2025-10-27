@@ -1,5 +1,5 @@
 import RoadmapIcon from "@/icons/RoadmapIcon";
-import { AntaFont, RubikFont } from "@/lib/font";
+import { AntaFont, RubikFont, TomorrowFont } from "@/lib/font";
 import React from "react";
 
 const RoadMap = () => {
@@ -72,11 +72,11 @@ const RoadMap = () => {
 
   return (
     <div id="roadmap" className="scroll-mt-30 mt-10 flex justify-center">
-      <div className="flex flex-col lg:flex-row w-full items-center bg-[#221235] rounded-4xl pt-6 lg:pt-0 justify-between xl:p-6 md:gap-6 min-h-[300px] overflow-hidden">
+      <div className="flex flex-col lg:flex-row w-full items-center bg-[#1A0705] rounded-4xl pt-6 lg:pt-0 justify-between xl:p-6 md:gap-6 min-h-[300px] overflow-hidden">
         <div>
           <h2
             data-aos="fade-left"
-            className={`text-[56px] lg:text-5xl xl:text-[56px] text-[#FF4F3A] ${AntaFont.className} lg:ml-10`}
+            className={`text-[48px] lg:text-5xl xl:text-[48px] text-[#FF4F3A] ${TomorrowFont.className} font-semibold lg:ml-10`}
           >
             Roadmap
           </h2>
@@ -87,9 +87,9 @@ const RoadMap = () => {
               data-aos="fade-up"
               data-aos-delay={index * 50}
               key={index}
-              className={`${RubikFont.className} absolute flex flex-col gap-2 ${item.top} ${item.left} ${item.right} ${item.bottom}`}
+              className={`${TomorrowFont.className} absolute flex flex-col gap-2 ${item.top} ${item.left} ${item.right} ${item.bottom}`}
             >
-              <h3 className="text-xs md:text-[16px] lg:text-[14px] xl:text-[16px] font-normal text-nowrap whitespace-nowrap text-[#FF4F3A] -mb-1">
+              <h3 className="text-xs md:text-[16px] lg:text-[14px] xl:text-[16px] font-medium text-nowrap whitespace-nowrap text-[#FF4F3A] -mb-1">
                 {item.month}
               </h3>
               <span className="text-[10px] md:text-[14px] lg:text-[12px] xl:text-[14px] font-normal text-white">

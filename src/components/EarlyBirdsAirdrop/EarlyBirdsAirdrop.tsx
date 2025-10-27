@@ -1,5 +1,5 @@
 "use client";
-import { AntaFont, OutfitFont, RubikFont } from "@/lib/font";
+import { AntaFont, OutfitFont, RubikFont, TomorrowFont } from "@/lib/font";
 import React from "react";
 import { Button } from "../ui/button";
 import { ArrowUpRight } from "lucide-react";
@@ -10,16 +10,19 @@ import { motion } from "motion/react";
 const EarlyBirdsAirdrop = () => {
   return (
     <div
-      className={` bg-white py-12 px-4 sm:px-6 lg:px-8 z-10 flex flex-col overflow-hidden  w-full ${AntaFont.className}`}
+      className={` py-12 px-4 sm:px-6 lg:px-8 z-10 flex flex-col overflow-hidden  w-full ${TomorrowFont.className}`}
     >
       <div className="text-center">
-        <h2 data-aos="fade-up" className="text-4xl md:text-[56px]">
+        <h2
+          data-aos="fade-up"
+          className="text-4xl font-semibold md:text-[44px]"
+        >
           {" "}
           Early Birds Airdrop
         </h2>
         <span
           data-aos="fade-up"
-          className={`text-xl md:text-[24px] font-medium block ${RubikFont.className}`}
+          className={`text-xl md:text-[24px] font-medium block mt-4 ${TomorrowFont.className}`}
         >
           Earn Pre-TGE $TIMES Now
         </span>
@@ -29,13 +32,13 @@ const EarlyBirdsAirdrop = () => {
           <div>
             <h2
               data-aos="fade-left"
-              className={`font-medium text-[24px] ${RubikFont.className}`}
+              className={`font-medium text-[24px] ${TomorrowFont.className}`}
             >
               ”Early Birds” Program{" "}
             </h2>
             <p
               data-aos="fade-left"
-              className={`text-[16px] font-normal ${RubikFont.className}`}
+              className={`text-[16px] mt-2 font-normal ${RubikFont.className}`}
             >
               You are lucky to be here before TGE. You can get tokens{" "}
               <br className="xl:hidden md:block hidden" /> on the most favorable
@@ -45,13 +48,13 @@ const EarlyBirdsAirdrop = () => {
           <div>
             <h2
               data-aos="fade-left"
-              className={`font-medium text-[24px] ${RubikFont.className}`}
+              className={`font-medium text-[24px] ${TomorrowFont.className}`}
             >
               How it works
             </h2>
             <p
               data-aos="fade-left"
-              className={`text-[16px] font-normal ${RubikFont.className}`}
+              className={`text-[16px] mt-2 font-normal ${RubikFont.className}`}
             >
               Follow Time of Times on Telegram and X, complete quests,
               <br className="xl:hidden md:block hidden" /> post public
@@ -64,7 +67,7 @@ const EarlyBirdsAirdrop = () => {
           <Button
             data-aos="fade-left"
             variant="default"
-            className={`rounded-full max-w-max !px-6 !py-5.5  md:text-[16px] font-medium ${OutfitFont.className}`}
+            className={`rounded-full max-w-max bg-transparent border-2 border-[#9BEFE3] text-white !px-6 !py-5.5  md:text-[16px] font-medium ${OutfitFont.className}`}
           >
             LEARN MORE ON TELEGRAM
             <ArrowUpRight

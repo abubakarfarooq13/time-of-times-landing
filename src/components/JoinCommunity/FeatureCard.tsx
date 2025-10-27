@@ -1,6 +1,6 @@
 "use client";
 
-import { AntaFont, RubikFont } from "@/lib/font";
+import { AntaFont, RubikFont, TomorrowFont } from "@/lib/font";
 import Image from "next/image";
 import { motion } from "motion/react";
 interface FeatureCardProps {
@@ -23,7 +23,7 @@ export function FeatureCard({
   return (
     <div
       data-aos="fade-up"
-      className="bg-[#BDB8C3] rounded-4xl p-8 w-full relative "
+      className="bg-[#AFF2E9] rounded-4xl p-8 w-full relative "
     >
       <div className={`absolute ${top} ${right}`}>
         <motion.div
@@ -48,12 +48,12 @@ export function FeatureCard({
         </motion.div>
       </div>
       <h3
-        className={`text-[32px] leading-9 font-normal text-[#221235] mb-3 mt-14 ${AntaFont.className}`}
+        className={`text-[32px] leading-9 font-medium text-[#221235] mb-3 mt-14 ${TomorrowFont.className}`}
       >
         {title}
       </h3>
       <p
-        className={`text-[16px] text-[#221235] leading-relaxed ${RubikFont.className}`}
+        className={`text-[18px] text-[#221235] leading-relaxed ${RubikFont.className}`}
       >
         {description}
       </p>

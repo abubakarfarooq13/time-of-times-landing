@@ -1,4 +1,4 @@
-import { AntaFont } from "@/lib/font";
+import { AntaFont, TomorrowFont } from "@/lib/font";
 import TestimonialCard from "./TestimonialsCard";
 
 const testimonials = [
@@ -8,6 +8,7 @@ const testimonials = [
     role: "Artist",
     image: "/testimonials/pooja.png",
     flag: "/testimonials/ind.png",
+    headline: "Won the daily vote",
     testimonial: "Won the daily vote, earned $1,200, gained global exposure.",
   },
   {
@@ -16,6 +17,7 @@ const testimonials = [
     role: "Daily User",
     image: "/testimonials/oleg.png",
     flag: "/testimonials/ukrine.png",
+    headline: "Voted daily",
     testimonial: "Voted daily, earned $350 in one month from rewards.",
   },
   {
@@ -24,6 +26,7 @@ const testimonials = [
     role: "Collector",
     image: "/testimonials/sarah.png",
     flag: "/testimonials/usa.png",
+    headline: "Bought a historical NFT",
     testimonial:
       "Bought a historical NFT on the inauguration day, resold with +3300% profit.",
   },
@@ -35,7 +38,7 @@ export default function UserTestimonials() {
       <div className=" mx-auto">
         <h2
           data-aos="fade-up"
-          className={`text-4xl  md:text-[56px] font-normal text-center mb-12 sm:mb-16 text-foreground ${AntaFont.className}`}
+          className={`text-4xl  md:text-[44px] font-semibold text-center mb-12 sm:mb-16 text-foreground ${TomorrowFont.className}`}
         >
           User Testimonials
         </h2>

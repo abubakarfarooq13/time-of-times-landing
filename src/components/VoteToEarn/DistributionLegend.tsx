@@ -1,5 +1,7 @@
 "use client";
 
+import { TomorrowFont } from "@/lib/font";
+
 const distributionData = [
   { label: "Community", percentage: "35.00%", color: "#FF9999" },
   { label: "Marketing", percentage: "15.00%", color: "#FF6B5B" },
@@ -15,7 +17,7 @@ const distributionData = [
 
 export function DistributionLegend() {
   return (
-    <div className="space-y-3">
+    <div className={`space-y-3 ${TomorrowFont.className}`}>
       <h3
         data-aos="fade-up"
         className="text-xl md:text-2xl font-medium text-white mb-4"
