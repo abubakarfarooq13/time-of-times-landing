@@ -2,7 +2,6 @@
 
 import { ThemeProvider } from "@/contexts/ThemeContext";
 // import ThemeToggleWrapper from "./ThemeToggleWrapper";
-// import ThemeDebug from "./ThemeDebug";
 
 export default function ClientThemeProvider({
   children,
@@ -12,7 +11,6 @@ export default function ClientThemeProvider({
   return (
     <ThemeProvider>
       {children}
-      {/* <ThemeDebug /> */}
       {/* <ThemeToggleWrapper /> */}
     </ThemeProvider>
   );
