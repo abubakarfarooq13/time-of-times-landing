@@ -151,7 +151,7 @@ const HowItWorks = () => {
               <div
                 className={`absolute flex flex-col gap-3 number-1  w-[60px] z-20 -right-10 top-[360px] ${TomorrowFont.className}`}
               >
-                <div className="bg-[#FF4F3A] text-white rounded-full flex items-center justify-center text-[16px] font-medium h-[40px] w-[40px] z-20  ">
+                <div className="bg-[#9BEFE3] text-black rounded-full flex items-center justify-center text-[16px] font-medium h-[40px] w-[40px] z-20  ">
                   1
                 </div>
               </div>
