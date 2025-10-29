@@ -29,7 +29,7 @@ const HowItWorks = () => {
     },
     {
       hr: "3 hr",
-      details: "Putin meets top officials after call with Trump",
+      details: "Xi Jinping meets top officials after call with Trump",
       top: "top-56 md:top-76",
       left: "left-1/4",
     },
