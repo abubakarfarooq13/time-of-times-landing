@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { AntaFont, OutfitFont, RubikFont } from "@/lib/font";
+import { AntaFont, OutfitFont, RubikFont, TomorrowFont } from "@/lib/font";
 import Image from "next/image";
 
 interface Event {
@@ -91,29 +91,33 @@ export default function EveryDayIsMinted() {
 
   return (
     <div
-      className={` bg-white  py-12 px-4 sm:px-6 lg:px-8 z-10 flex flex-col w-full ${AntaFont.className}`}
+      className={`  py-12 px-4 sm:px-6 lg:px-8 z-10 flex flex-col w-full ${AntaFont.className}`}
     >
       <div className=" mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-[56px] font-normal text-black mb-2 text-balance">
+        <div className="text-center mb-18">
+          <h1
+            data-aos="fade-up"
+            className={`text-4xl md:text-[44px] font-semibold dark:text-white text-black mb-2 text-balance ${TomorrowFont.className}`}
+          >
             Every Day Is Minted
           </h1>
           <p
-            className={`text-xl md:text-[24px] font-medium text-balance ${RubikFont.className}`}
+            data-aos="fade-up"
+            className={`text-xl md:text-[18px] font-normal text-balance ${RubikFont.className}`}
           >
             Once and Forever
           </p>
         </div>
-        <div className="relative mx-2 md:mx-0">
+        <div className="relative mx-2 xl:mx-0 ">
           <button
             onClick={handlePrev}
-            className="absolute left-8 top-1/2 -translate-y-1/2 -translate-x-12 sm:-translate-x-16 z-10 p-2 bg-white rounded-full border-1 border-[#FF4F3A] text-[#FF4F3A] other-shadow-2 hover:bg-orange-50 transition-colors"
+            className="absolute left-8 top-1/2 -translate-y-1/2 -translate-x-12 sm:-translate-x-16 z-10 p-2 bg-[#9BEFE3] rounded-full border-1 border-[#9BEFE3] text-black other-shadow-2 hover:bg-orange-50 transition-colors"
             aria-label="Previous slide"
           >
-            <ChevronLeft strokeWidth={2} className="w-6 h-6" />
+            <ChevronLeft strokeWidth={3} className="w-6 h-6" />
           </button>
 
-          <div className={`${OutfitFont.className} `}>
+          <div data-aos="fade-up" className={`${OutfitFont.className} `}>
             <div className="flex gap-4 sm:gap-6 lg:gap-8 ">
               {visibleEvents.map((event) => (
                 <div
@@ -121,12 +125,14 @@ export default function EveryDayIsMinted() {
                   className="flex-1 min-w-0 bg-white other-shadow-2 rounded-3xl p-6 sm:p-8 "
                 >
                   <p
-                    className={`${event.dateColor} text-[16px]  font-semibold mb-2 text-[#FF4F3A] text-center`}
+                    className={`${event.dateColor} text-[16px]  font-medium mb-0 text-[#FF4F3A] text-center ${TomorrowFont.className}`}
                   >
                     {event.date}
                   </p>
 
-                  <h2 className="text-sm lg:text-[20px] text-center font-semibold text-[#101010] mb-6 text-balance">
+                  <h2
+                    className={`text-sm lg:text-[24px] text-center font-medium text-[#101010] mb-6 text-balance ${TomorrowFont.className}`}
+                  >
                     {event.title}
                   </h2>
 
@@ -168,14 +174,17 @@ export default function EveryDayIsMinted() {
 
           <button
             onClick={handleNext}
-            className="absolute right-8 top-1/2 -translate-y-1/2 translate-x-12 sm:translate-x-16 z-10 p-2 rounded-full border-1 border-[#FF4F3A] text-[#FF4F3A] other-shadow-2 bg-white hover:bg-orange-50 transition-colors"
+            className="absolute right-8 top-1/2 -translate-y-1/2 translate-x-12 sm:translate-x-16 z-10 p-2 rounded-full border-1 border-[#9BEFE3] text-black other-shadow-2 bg-[#9BEFE3] hover:bg-orange-50 transition-colors"
             aria-label="Next slide"
           >
-            <ChevronRight strokeWidth={2} className="w-6 h-6" />
+            <ChevronRight strokeWidth={3} className="w-6 h-6" />
           </button>
         </div>
 
-        <div className="flex justify-center gap-2 mt-8 sm:mt-12">
+        {/* <div
+          data-aos="fade-up"
+          className="flex justify-center gap-2 mt-8 sm:mt-12"
+        >
           {Array.from({ length: maxIndex + 1 }).map((_, index) => (
             <button
               key={index}
@@ -188,10 +197,13 @@ export default function EveryDayIsMinted() {
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
-        </div>
+        </div> */}
       </div>
-      <div className="flex justify-between flex-col md:flex-row items-center  mt-[200px] xl:mt-[250px] gap-8">
-        <div className="bg-[#FF4F3A] md:min-h-[400px] lg:min-h-auto rounded-4xl p-6 relative w-full">
+      <div className="flex justify-between flex-col md:flex-row items-center  mt-[200px] xl:mt-[280px] gap-8">
+        <div
+          data-aos="fade-right"
+          className="bg-[#9BEFE3] md:min-h-[400px] lg:min-h-auto rounded-4xl p-6 relative w-full"
+        >
           <div className="absolute w-[250px] lg:w-auto -top-[150px] lg:-top-[140px] xl:-top-[180px] left-1/2 -translate-x-1/2">
             <Image
               src="/everydayisminted/man.png"
@@ -201,10 +213,10 @@ export default function EveryDayIsMinted() {
             />
           </div>
           <div
-            className={`text-center text-white mt-4 xl:mt-8 font-normal ${AntaFont.className}`}
+            className={`text-center text-black mt-4 xl:mt-8 font-normal ${TomorrowFont.className}`}
           >
-            <span className="text-[24px] ">FOR ARTIST</span>
-            <h2 className="text-[42px] font-normal leading-11 mt-4 xl:mt-8">
+            <span className="text-[24px] font-medium">FOR ARTIST</span>
+            <h2 className="text-[42px] font-medium leading-11 mt-4 xl:mt-4">
               Turn
               <br />
               Headlines Into Art{" "}
@@ -219,7 +231,10 @@ export default function EveryDayIsMinted() {
             </p>
           </div>
         </div>
-        <div className="bg-[#221235] rounded-4xl p-6 mt-44 md:mt-0 relative w-full">
+        <div
+          data-aos="fade-left"
+          className="bg-[#FF6B5C] rounded-4xl p-6 mt-44 md:mt-0 relative w-full"
+        >
           <div className="absolute w-[250px] lg:w-auto -top-[150px] lg:-top-[140px] xl:-top-[180px] left-1/2 -translate-x-1/2">
             <Image
               src="/everydayisminted/man-2.png"
@@ -229,10 +244,16 @@ export default function EveryDayIsMinted() {
             />
           </div>
           <div
-            className={`text-center text-white mt-4 xl:mt-8 font-normal ${AntaFont.className}`}
+            className={`text-center text-black mt-4 xl:mt-8 font-medium ${AntaFont.className}`}
           >
-            <span className="text-[24px] ">FOR COLLECTOR</span>
-            <h2 className="text-[42px] font-normal leading-11 mt-4 xl:mt-8">
+            <span
+              className={`text-[24px] font-medium ${TomorrowFont.className}`}
+            >
+              FOR COLLECTOR
+            </span>
+            <h2
+              className={`text-[42px] font-medium leading-11 mt-4 xl:mt-4 ${TomorrowFont.className}`}
+            >
               Own a
               <br />
               Piece of History

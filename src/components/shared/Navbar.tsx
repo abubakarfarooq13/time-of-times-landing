@@ -1,11 +1,11 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { OutfitFont } from "@/lib/font";
+import { OutfitFont, TomorrowFont } from "@/lib/font";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-
+import { motion, AnimatePresence } from "motion/react";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -13,15 +13,15 @@ const Navbar = () => {
   const NavItems = [
     {
       label: "Whitepaper",
-      href: "#whitepaper",
+      href: "/",
     },
     {
       label: "Contact",
-      href: "#contact",
+      href: "/",
     },
     {
       label: "Tokenomics",
-      href: "#tokenomics",
+      href: "/",
     },
     {
       label: "Roadmap",
@@ -44,60 +44,72 @@ const Navbar = () => {
   };
 
   return (
-    <>
-      <nav
+    <div
+
+    // className="bg-white dark:bg-white"
+    >
+      <motion.nav
+        initial={{ y: -80, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ ease: "easeOut" }}
         className={`fixed  ${
-          isScrolled ? "top-4" : "top-0"
-        } left-2 right-2 xl:left-0 xl:right-0 z-50 transition-all duration-300  ${
-          OutfitFont.className
-        }`}
+          isScrolled
+            ? "top-4 left-2 right-2 xl:left-0 xl:right-0 "
+            : "top-0 left-0 right-0 bg-white dark:bg-white"
+        }   z-50 transition-all duration-300  ${OutfitFont.className}`}
       >
         <div
-          className={`container mx-auto lg:px-0 transition-all duration-300 ${
+          className={`container  mx-auto lg:px-0 transition-all duration-300 ${
             isScrolled
-              ? "bg-white rounded-full backdrop-blur-md other-shadow  py-2 !px-4 "
-              : "bg-transparent py-4 lg:py-6"
+              ? " rounded-full bg-white backdrop-blur-md other-shadow  py-2 lg:py-4 !px-4 "
+              : "bg-transparent !px-4 xl:!px-0  py-2 lg:py-4"
           }`}
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <Image
-                src="/logo.png"
+                src="/logon.png"
                 alt="logo"
-                width={isScrolled ? 80 : 100}
-                height={isScrolled ? 80 : 100}
+                width={isScrolled ? 100 : 130}
+                height={isScrolled ? 100 : 130}
                 className="transition-all duration-300"
               />
             </div>
 
             <div className="hidden lg:flex items-center gap-8">
-              {NavItems.map((item) => (
+              {NavItems.map((item, index) => (
                 <Link
-                  key={item.href}
+                  key={index}
                   href={item.href}
-                  className="text-[#444444] hover:text-[#FF4F3A] transition-colors duration-200 font-medium"
+                  className="relative text-[#444444] hover:text-black transition-colors duration-200 font-medium group"
                 >
                   {item.label}
+                  <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#9BEFE3] transition-all duration-300 group-hover:left-0 group-hover:w-full"></span>
                 </Link>
               ))}
             </div>
 
-            <div className="hidden lg:flex items-center gap-4">
-              <Button variant="default" className="rounded-full !pl-4 !pr-2">
+            <div
+              className={`hidden lg:flex items-center gap-4 ${TomorrowFont.className}`}
+            >
+              <Button
+                variant="default"
+                className="rounded-full dark:bg-[#9BEFE3] !pl-4 !pr-2"
+              >
                 Join Community
                 <ArrowUpRight
                   strokeWidth={2.5}
-                  className="!h-4.5 !w-4.5 text-black p-0.5 bg-white rounded-full"
+                  className="!h-4.5 !w-4.5 text-black dark:text-[#9BEFE3] p-0.5 bg-white dark:bg-black rounded-full "
                 />
               </Button>
               <Button
                 variant="outline"
-                className="rounded-full border-2 !pl-4 !pr-2"
+                className="rounded-full border-2 dark:border-black dark:text-black !pl-4 !pr-2"
               >
                 Join Waitlist
                 <ArrowUpRight
                   strokeWidth={2.5}
-                  className="!h-4.5 !w-4.5 text-white p-0.5 bg-black rounded-full"
+                  className="!h-4.5 !w-4.5  text-white p-0.5 bg-black rounded-full"
                 />
               </Button>
             </div>
@@ -117,72 +129,142 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      </nav>
+      </motion.nav>
 
-      {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-60 lg:hidden">
-          <div
-            className="fixed inset-0 bg-black/80"
-            onClick={toggleMobileMenu}
-          />
-          <div className="fixed top-0 right-0 h-full w-80 max-w-sm bg-white shadow-xl">
-            <div className="flex flex-col h-full">
-              <div className="flex items-center justify-between p-6 border-b">
-                <Image src="/logo.png" alt="logo" width={60} height={60} />
-                <button
-                  onClick={toggleMobileMenu}
-                  className="p-2 rounded-md text-[#444444] hover:text-black hover:bg-gray-100 transition-colors duration-200"
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            className="fixed inset-0 z-60 lg:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          >
+            <motion.div
+              className="fixed inset-0 bg-black/80"
+              onClick={toggleMobileMenu}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+            />
+            <motion.div
+              className="fixed top-0 left-0 h-full w-full bg-white shadow-xl"
+              initial={{ y: "-100%", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: "-100%", opacity: 0 }}
+              transition={{
+                type: "tween",
+                ease: "easeOut",
+                duration: 0.5,
+              }}
+            >
+              <div className="flex flex-col h-full">
+                <motion.div
+                  className="flex items-center justify-between p-6 border-b"
+                  initial={{ y: -30, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.2, duration: 0.4, ease: "easeOut" }}
                 >
-                  <X className="h-6 w-6" />
-                </button>
-              </div>
+                  <Image src="/logon.png" alt="logo" width={100} height={100} />
+                  <button
+                    onClick={toggleMobileMenu}
+                    className="p-2 rounded-md text-[#444444] hover:text-black hover:bg-gray-100 transition-colors duration-200"
+                  >
+                    <X className="h-6 w-6" />
+                  </button>
+                </motion.div>
 
-              <div className="flex-1 px-6 py-6">
-                <nav className="space-y-4">
-                  {NavItems.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className="block text-lg text-[#444444] hover:text-black transition-colors duration-200 font-medium py-2"
+                <motion.div
+                  className="flex-1 px-6 py-6 flex items-center justify-center"
+                  initial={{ y: 30, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.3, duration: 0.4, ease: "easeOut" }}
+                >
+                  <nav className="space-y-6 text-center">
+                    {NavItems.map((item, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ y: 20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{
+                          delay: 0.3 + index * 0.1,
+                          type: "tween",
+                          ease: "easeOut",
+                          duration: 0.4,
+                        }}
+                      >
+                        <motion.div
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                          transition={{
+                            type: "tween",
+                            ease: "easeInOut",
+                            duration: 0.2,
+                          }}
+                        >
+                          <Link
+                            href={item.href}
+                            className="block text-2xl text-[#444444] hover:text-black transition-colors duration-200 font-medium py-3"
+                            onClick={toggleMobileMenu}
+                          >
+                            {item.label}
+                          </Link>
+                        </motion.div>
+                      </motion.div>
+                    ))}
+                  </nav>
+                </motion.div>
+
+                <motion.div
+                  className={`p-6 border-t space-y-4 ${TomorrowFont.className}`}
+                  initial={{ y: 30, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.6, duration: 0.4, ease: "easeOut" }}
+                >
+                  <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.7, duration: 0.4, ease: "easeOut" }}
+                  >
+                    <Button
+                      variant="default"
+                      className="w-full dark:bg-[#9BEFE3] rounded-full !pl-4 !pr-2"
                       onClick={toggleMobileMenu}
                     >
-                      {item.label}
-                    </Link>
-                  ))}
-                </nav>
+                      Join Community
+                      <ArrowUpRight
+                        strokeWidth={2.5}
+                        className="!h-4.5 !w-4.5 text-[#9BEFE3] p-0.5 bg-black rounded-full"
+                      />
+                    </Button>
+                  </motion.div>
+                  <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.8, duration: 0.4, ease: "easeOut" }}
+                  >
+                    <Button
+                      variant="outline"
+                      className="w-full rounded-full border-2 !border-black text-black !pl-4 !pr-2"
+                      onClick={toggleMobileMenu}
+                    >
+                      Join Waitlist
+                      <ArrowUpRight
+                        strokeWidth={2.5}
+                        className="!h-4.5 !w-4.5 text-white p-0.5 bg-black rounded-full"
+                      />
+                    </Button>
+                  </motion.div>
+                </motion.div>
               </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-              <div className="p-6 border-t space-y-4">
-                <Button
-                  variant="default"
-                  className="w-full rounded-full !pl-4 !pr-2"
-                  onClick={toggleMobileMenu}
-                >
-                  Join Community
-                  <ArrowUpRight
-                    strokeWidth={2.5}
-                    className="!h-4.5 !w-4.5 text-black p-0.5 bg-white rounded-full"
-                  />
-                </Button>
-                <Button
-                  variant="outline"
-                  className="w-full rounded-full border-2 !pl-4 !pr-2"
-                  onClick={toggleMobileMenu}
-                >
-                  Join Waitlist
-                  <ArrowUpRight
-                    strokeWidth={2.5}
-                    className="!h-4.5 !w-4.5 text-white p-0.5 bg-black rounded-full"
-                  />
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      <div className="h-24 lg:h-28" />
-    </>
+      {/* <div className="h-24 lg:h-28" /> */}
+    </div>
   );
 };
 

@@ -1,3 +1,5 @@
+/*eslint-disable*/
+//@ts-nocheck
 import EarlyBirdsAirdrop from "@/components/EarlyBirdsAirdrop/EarlyBirdsAirdrop";
 import EveryDayIsMinted from "@/components/EveryDayIsMinted/EveryDayIsMinted";
 import Hero from "@/components/Hero/Hero";
@@ -10,7 +12,7 @@ import VoteToEarn from "@/components/VoteToEarn/VoteToEarn";
 
 export default function Home() {
   return (
-    <div className="container  xl:px-0 mx-auto">
+    <div className="container  overflow-hidden 2xl:overflow-visible xl:px-0 mx-auto">
       <Navbar />
       <main className="">
         <Hero />
@@ -21,7 +23,7 @@ export default function Home() {
         <EarlyBirdsAirdrop />
         <JoinCommunity />
       </main>
-      <footer className="mx-2 lg:mx-0">
+      <footer className="mx-2 ">
         <Footer />
       </footer>
     </div>

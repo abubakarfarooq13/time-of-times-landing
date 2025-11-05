@@ -9,12 +9,18 @@ import { ArrowUpRight } from "lucide-react";
 const JoinCommunity = () => {
   return (
     <div
-      className={` bg-white xl:pt-12 px-4 sm:px-6 lg:px-8 z-10 flex flex-col  w-full ${AntaFont.className}`}
+      className={` xl:pt-12 px-4 sm:px-6 lg:px-8 z-10 flex flex-col  w-full ${AntaFont.className}`}
     >
       <div className="text-center">
-        <h2 className="text-4xl md:text-[56px]">JOIN COMMUNITY</h2>
+        <h2
+          data-aos="fade-up"
+          className="text-4xl font-semibold md:text-[44px]"
+        >
+          JOIN COMMUNITY
+        </h2>
         <span
-          className={`text-xl md:text-[24px] font-medium  block ${RubikFont.className}`}
+          data-aos="fade-up"
+          className={`text-xl md:text-[18px] font-normal mt-2  block ${RubikFont.className}`}
         >
           Early followers get the most benefits
         </span>
@@ -28,8 +34,9 @@ const JoinCommunity = () => {
       <section className="xl:py-2 px-4 md:px-8 ">
         <div className=" mx-auto flex justify-center items-center flex-col md:flex-row gap-4">
           <Button
+            data-aos="fade-up"
             variant="default"
-            className={`rounded-full w-full md:max-w-max !px-6 !py-5.5   text-[16px] font-medium ${OutfitFont.className}`}
+            className={`rounded-full bg-transparent border-2 border-[#9BEFE3] text-white w-full md:max-w-max !px-6 !py-5.5   text-[16px] font-medium ${OutfitFont.className}`}
           >
             Join Telegram
             <ArrowUpRight
@@ -38,8 +45,9 @@ const JoinCommunity = () => {
             />
           </Button>
           <Button
+            data-aos="fade-up"
             variant="default"
-            className={`rounded-full w-full md:max-w-max !px-6 !py-5.5  text-[16px] font-medium ${OutfitFont.className}`}
+            className={`rounded-full bg-transparent border-2 border-[#9BEFE3] text-white w-full md:max-w-max !px-6 !py-5.5  text-[16px] font-medium ${OutfitFont.className}`}
           >
             Follow on X
             <ArrowUpRight
@@ -56,11 +64,11 @@ const JoinCommunity = () => {
         </div>
       </section>
 
-      <section className="py-8 px-4 md:px-8">
+      {/* <section className="py-8 px-4 md:px-8">
         <div className=" mx-auto">
           <RiskStatementBanner />
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

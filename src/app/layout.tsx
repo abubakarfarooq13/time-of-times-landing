@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import AOSWrapper from "@/components/hook/useAos";
+import ClientThemeProvider from "@/components/shared/ClientThemeProvider";
 
 const baseUrl = "https://time-of-times.vercel.app/";
 // const baseUrl = "http://localhost:3000";
@@ -96,11 +98,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
-        <meta name="theme-color" content="#FF4F3A" />
+        <meta name="theme-color" content="#9BEFE3" />
       </head>
-      <body className={` antialiased`}>{children}</body>
+      <body className={` antialiased`}>
+        <ClientThemeProvider>
+          <AOSWrapper>{children}</AOSWrapper>
+        </ClientThemeProvider>
+      </body>
     </html>
   );
 }
