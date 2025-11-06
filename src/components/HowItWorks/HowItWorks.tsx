@@ -19,31 +19,31 @@ const HowItWorks = () => {
       hr: "1 hr",
       details: "France & Britain refine UN Gaza force plans",
       top: "top-8",
-      left: "left-6 md:left-auto",
+      left: "left-6 md:-left-16",
     },
     {
       hr: "5 hr",
       details: "Japan to vote on next prime minister next week",
       top: "top-30",
-      left: "left-14 md:left-1/2",
+      left: "left-14 md:left-[18%]",
     },
     {
       hr: "3 hr",
       details: "Xi Jinping meets top officials after call with Trump",
       top: "top-56 md:top-76",
-      left: "left-6 md:left-1/4",
+      left: "left-6 md:[18%]",
     },
     {
       hr: "6 hr",
       details: "IMF raises global growth outlook, warns of trade risks",
       top: "top-72 md:top-92",
-      left: "left-2 md:left-2",
+      left: "left-2 md:-left-8",
     },
     {
       hr: "7 hr",
       details: "Oil outlook: surplus risk and price pressure",
       top: "bottom-18 md:bottom-6",
-      left: "left-16 md:left-6",
+      left: "left-16 md:-left-6",
     },
   ];
 
@@ -85,18 +85,18 @@ const HowItWorks = () => {
         trigger: ".hero-gsap",
         start: "top top",
         end: `+=${totalScrollDistance}`,
-        scrub: 0.5,
+        scrub: true,
         pin: true,
         anticipatePin: 1,
         snap: {
           snapTo: snapPoints,
-          duration: { min: 0.5, max: 1 },
-          ease: "power2.inOut",
-          delay: 0.2,
-          inertia: false,
+          duration: { min: 0.2, max: 0.4 },
+          ease: "power1.inOut",
+          delay: 0,
+          inertia: true,
         },
       },
-      defaults: { ease: "power2.out" },
+      defaults: { ease: "power1.out" },
     });
 
     for (let i = 1; i < totalSteps; i++) {
@@ -105,13 +105,18 @@ const HowItWorks = () => {
 
       tl.addLabel(`step${i}`);
 
-      tl.to({}, { duration: 0.3 });
+      tl.to({}, { duration: 0.2 });
 
-      tl.to(current, { opacity: 0.3, y: -50, duration: 0.5 });
+      tl.to(current, {
+        opacity: 0.3,
+        y: -50,
+        duration: 0.3,
+        ease: "power1.inOut",
+      });
       if (next) {
         tl.set(current, { display: "none" });
         tl.set(next, { display: "block", opacity: 0.3, y: 50 });
-        tl.to(next, { opacity: 1, y: 0, duration: 0.5 });
+        tl.to(next, { opacity: 1, y: 0, duration: 0.3, ease: "power1.inOut" });
       }
     }
 
@@ -121,7 +126,7 @@ const HowItWorks = () => {
       trigger: ".hero-gsap",
       start: "top top",
       end: `+=${totalScrollDistance}`,
-      scrub: 0.5,
+      scrub: true,
       onUpdate: (self) => {
         const progressPerStep = 1 / (totalSteps - 1);
         const rawIndex = Math.floor(self.progress / progressPerStep) + 1;
@@ -132,16 +137,16 @@ const HowItWorks = () => {
           {
             backgroundColor: "#E5E5E5",
             color: "#000",
-            duration: 0.3,
-            ease: "power2.out",
+            duration: 0.2,
+            ease: "power1.out",
           }
         );
 
         gsap.to(`.number-${step} div`, {
           backgroundColor: "#9BEFE3",
           color: "#000000",
-          duration: 0.3,
-          ease: "power2.out",
+          duration: 0.2,
+          ease: "power1.out",
         });
       },
     });
@@ -231,7 +236,7 @@ const HowItWorks = () => {
               {news.map((item, index) => (
                 <div
                   key={index}
-                  className={`flex gap-2 ${item.top} ${item.left} bg-white rounded-full other-shadow px-4 z-20 py-1 text-xs md:text-sm items-center absolute ${RubikFont.className}`}
+                  className={`flex gap-2 ${item.top} ${item.left} bg-white rounded-full other-shadow px-4 z-20 py-1 text-xs md:text-lg items-center absolute ${RubikFont.className}`}
                 >
                   <span className="text-[#747474] text-nowrap">{item.hr}</span>
                   <span

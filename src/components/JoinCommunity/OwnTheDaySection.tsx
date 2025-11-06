@@ -50,20 +50,20 @@ export function OwnTheDaySection() {
         >
           <h2
             data-aos="fade-left"
-            className={`text-4xl md:text-[44px] font-semibold text-black  mb-2 ${TomorrowFont.className}`}
+            className={`text-4xl md:text-[44px] font-semibold text-black mt-4  mb-2 ${TomorrowFont.className}`}
           >
             Own the Day!
           </h2>
           <p
             data-aos="fade-left"
-            className={`text-[18px] text-black   ${RubikFont.className}`}
+            className={`text-[18px] mt-2 text-black   ${RubikFont.className}`}
           >
             Every day leaves a mark — in headlines, in memories, in culture.
             With Time
             <br className="hidden lg:hidden xl:block" /> of Times, that mark
             becomes yours.
           </p>
-          <div className="text-black flex flex-col lg:flex-row items-center gap-2 text-[18px] font-normal mt-3">
+          <div className="text-black flex flex-col lg:flex-row items-center  gap-4 text-[18px] font-normal mt-6">
             <div className="bg-[#FF6350] w-[32px] h-[32px] flex items-center justify-center rounded-full p-1 ">
               <Check className="w-8 h-8 text-white" />
             </div>
@@ -73,7 +73,7 @@ export function OwnTheDaySection() {
               <br /> transform it into art, preserved forever as a unique NFT.
             </p>
           </div>
-          <div className="text-black flex flex-col lg:flex-row items-center gap-2 text-[18px] font-normal mt-3">
+          <div className="text-black flex flex-col lg:flex-row items-center gap-4 text-[18px] font-normal mt-6">
             <div className="bg-[#FF6350] w-[32px] h-[32px] flex items-center justify-center rounded-full p-1 ">
               <Check className="w-8 h-8 text-white" />
             </div>
@@ -84,7 +84,7 @@ export function OwnTheDaySection() {
               an image — you claim a moment in history.
             </p>
           </div>
-          <div className="text-black flex flex-col lg:flex-row items-center gap-2 text-[18px] font-normal mt-3">
+          <div className="text-black flex flex-col lg:flex-row items-center gap-4 text-[18px] font-normal mt-6">
             <div className="bg-[#FF6350] w-[32px] h-[32px] flex items-center justify-center rounded-full p-1 ">
               <Check className="w-8 h-8 text-white" />
             </div>
@@ -94,11 +94,11 @@ export function OwnTheDaySection() {
               <br className="hidden xl:block" /> person can truly own.
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center lg:justify-start sm:flex-row gap-4 mt-6">
+          <div className="flex flex-col items-center justify-center lg:justify-start sm:flex-row gap-4 mt-10">
             <Button
               data-aos="fade-up"
               variant="default"
-              className={`rounded-full w-full md:max-w-max !px-6 !py-5.5  text-sm md:text-[16px] bg-[#9BEFE3] font-medium ${OutfitFont.className}`}
+              className={`rounded-full w-full md:max-w-max !px-10 !py-5.5  text-sm md:text-[16px] bg-[#9BEFE3] font-medium ${OutfitFont.className}`}
             >
               JOIN WAITLIST
               <ArrowUpRight
@@ -121,7 +121,7 @@ export function OwnTheDaySection() {
         </div>
 
         <div className="">
-          <div className=" py-6 text-center relative w-[310px] xl:w-[320px] pr-6 xl:pr-0 xl:mr-6 flex">
+          <div className=" py-6 text-center relative w-[310px] xl:w-[320px] pr-6 xl:pr-0 xl:mr-26 flex">
             <div
               data-aos="fade-right"
               className="text-6xl mb-4 w-full z-10 flex justify-end relative"
@@ -156,8 +156,8 @@ export function OwnTheDaySection() {
                 <Image
                   src="/joincommunity/c.png"
                   alt="day"
-                  width={230}
-                  height={230}
+                  width={280}
+                  height={280}
                 />
               </motion.div>
             </div>

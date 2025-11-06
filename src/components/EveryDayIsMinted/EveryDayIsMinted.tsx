@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { AntaFont, OutfitFont, RubikFont, TomorrowFont } from "@/lib/font";
 import Image from "next/image";
+import { motion, AnimatePresence } from "motion/react";
 
 interface Event {
   id: number;
@@ -134,56 +135,82 @@ export default function EveryDayIsMinted() {
 
           <div data-aos="fade-up" className={`${OutfitFont.className} `}>
             <div className="flex gap-4 sm:gap-6 lg:gap-8 ">
-              {visibleEvents.map((event) => (
-                <div
-                  key={event.id}
-                  className="flex-1 min-w-0 bg-white other-shadow-2 rounded-3xl p-6 sm:p-8 "
-                >
-                  <p
-                    className={`${event.dateColor} text-[16px]  font-medium mb-0 text-[#FF4F3A] text-center ${TomorrowFont.className}`}
+              <AnimatePresence>
+                {visibleEvents.map((event, index) => (
+                  <motion.div
+                    key={`${event.id}-${currentIndex}`}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    // exit={{ opacity: 0, scale: 0.8, y: -50 }}
+                    transition={{
+                      duration: 1,
+                      ease: [0.4, 0, 0.2, 1],
+                      delay: index * 0.1,
+                    }}
+                    className="flex-1 min-w-0 bg-white other-shadow-2 rounded-3xl p-6 sm:p-8 "
                   >
-                    {event.date}
-                  </p>
+                    <motion.p
+                      initial={{ opacity: 1, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
+                      className={`${event.dateColor} text-[16px]  font-medium mb-0 text-[#FF4F3A] text-center ${TomorrowFont.className}`}
+                    >
+                      {event.date}
+                    </motion.p>
 
-                  <h2
-                    className={`text-sm lg:text-[24px] text-center font-medium text-[#101010] mb-6 text-balance ${TomorrowFont.className}`}
-                  >
-                    {event.title}
-                  </h2>
+                    <motion.h2
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+                      className={`text-sm lg:text-[24px] text-center font-medium text-[#101010] mb-6 text-balance ${TomorrowFont.className}`}
+                    >
+                      {event.title}
+                    </motion.h2>
 
-                  <div className="grid grid-cols-2 gap-3 sm:gap-4">
-                    <div className="flex flex-col">
-                      <div className="relative w-full aspect-square rounded-t-[17px] overflow-hidden ">
-                        <Image
-                          src={event.images.ai || "/placeholder.svg"}
-                          alt="AI Vision"
-                          className="w-full h-full object-cover"
-                          width={400}
-                          height={400}
-                        />
-                      </div>
-                      <p className="text-center text-sm lg:text-[20px] bg-[#000000B2] font-medium text-white py-2 rounded-b-[17px]">
-                        AI Vision
-                      </p>
+                    <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                      <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                        className="flex flex-col"
+                      >
+                        <div className="relative w-full aspect-square rounded-t-[17px] overflow-hidden ">
+                          <Image
+                            src={event.images.ai || "/placeholder.svg"}
+                            alt="AI Vision"
+                            className="w-full h-full object-cover"
+                            width={400}
+                            height={400}
+                          />
+                        </div>
+                        <p className="text-center text-sm lg:text-[20px] bg-[#000000B2] font-medium text-white py-2 rounded-b-[17px]">
+                          AI Vision
+                        </p>
+                      </motion.div>
+
+                      <motion.div
+                        initial={{ opacity: 0, x: 30 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
+                        className="flex flex-col"
+                      >
+                        <div className="relative w-full aspect-square ounded-t-[17px] overflow-hidden">
+                          <Image
+                            src={event.images.artist || "/placeholder.svg"}
+                            alt="Top Voted Artist"
+                            className="w-full h-full object-cover"
+                            width={400}
+                            height={400}
+                          />
+                        </div>
+                        <p className="text-center text-sm lg:text-[20px] bg-[#000000B2] font-medium text-white py-2 rounded-b-[17px] ">
+                          Top Voted Artist
+                        </p>
+                      </motion.div>
                     </div>
-
-                    <div className="flex flex-col">
-                      <div className="relative w-full aspect-square ounded-t-[17px] overflow-hidden">
-                        <Image
-                          src={event.images.artist || "/placeholder.svg"}
-                          alt="Top Voted Artist"
-                          className="w-full h-full object-cover"
-                          width={400}
-                          height={400}
-                        />
-                      </div>
-                      <p className="text-center text-sm lg:text-[20px] bg-[#000000B2] font-medium text-white py-2 rounded-b-[17px] ">
-                        Top Voted Artist
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
+                  </motion.div>
+                ))}
+              </AnimatePresence>
             </div>
           </div>
 
