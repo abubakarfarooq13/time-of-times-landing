@@ -56,11 +56,11 @@ export function OwnTheDaySection() {
           </h2>
           <p
             data-aos="fade-left"
-            className={`text-sm md:text-[18px] text-black   ${RubikFont.className}`}
+            className={`text-[18px] text-black   ${RubikFont.className}`}
           >
             Every day leaves a mark — in headlines, in memories, in culture.
             With Time
-            <br className="block lg:hidden xl:block" /> of Times, that mark
+            <br className="hidden lg:hidden xl:block" /> of Times, that mark
             becomes yours.
           </p>
           <div className="text-black flex flex-col lg:flex-row items-center gap-2 text-[18px] font-normal mt-3">
@@ -80,7 +80,7 @@ export function OwnTheDaySection() {
             <p className="leading-5">
               {" "}
               By collecting these one-of-a-kind pieces, you don’t just buy{" "}
-              <br />
+              <br className="hidden xl:block" />
               an image — you claim a moment in history.
             </p>
           </div>
@@ -91,7 +91,7 @@ export function OwnTheDaySection() {
             <p className="leading-5">
               {" "}
               Each NFT is a living record, a piece of time that only one
-              <br /> person can truly own.
+              <br className="hidden xl:block" /> person can truly own.
             </p>
           </div>
           <div className="flex flex-col items-center justify-center lg:justify-start sm:flex-row gap-4 mt-6">
