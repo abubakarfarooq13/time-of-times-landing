@@ -55,7 +55,7 @@ export default function TestimonialCard({
         </p>
       </div>
 
-      <div className="mt-4 sm:mt-6 bg-[#9BEFE3] rounded-[32px] px-3 xl:px-8 py-4  xl:py-4 flex items-center justify-center absolute -bottom-10 xl:-bottom-16 left-6 right-6 flex-col lg:gap-2">
+      <div className="mt-4 sm:mt-6 bg-white rounded-[32px] px-3 xl:px-8 py-4  xl:py-4 flex items-center justify-center absolute -bottom-10 xl:-bottom-16 left-6 right-6 flex-col lg:gap-2">
         <h2
           className={`${TomorrowFont.className} text-[18px] md:text-[24px] font-medium text-black`}
         >

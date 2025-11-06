@@ -13,7 +13,7 @@ export function FairPlayEconomy() {
           FAIR PLAY ECONOMY
         </h2>
 
-        <div className="bg-[#9BEFE3] rounded-4xl p-6 lg:px-6 xl:px-12 lg:py-8">
+        <div className="bg-[#9BEFE3] rounded-4xl p-6 lg:px-6 xl:px-8 lg:py-8">
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8 md:gap-6">
             <div className="lg:col-span-1 flex flex-col justify-center items-center lg:items-start">
               <h3

@@ -58,17 +58,17 @@ export function Tokenomics() {
 
             <div
               data-aos="fade-up"
-              className="flex md:hidden ml-8 my-8 md:my-0 md:ml-0 lg:flex  justify-center w-full lg:absolute   left-16 xl:left-14"
+              className="flex md:hidden ml-0  my-8 md:my-0 md:ml-0 lg:flex  justify-center w-full lg:absolute   left-16 xl:left-14 "
             >
-              {/* <PieChart /> */}
-              <Image
+              <PieChart />
+              {/* <Image
                 src="/votetoearn/pie.png"
                 alt="Pie Chart"
                 className="w-auto h-auto lg:w-[350px] xl:w-[420px]"
                 width={420}
                 height={420}
                 quality={100}
-              />
+              /> */}
             </div>
 
             <div className="mt-6 md:mt-0">

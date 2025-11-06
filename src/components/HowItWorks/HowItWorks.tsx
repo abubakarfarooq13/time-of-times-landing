@@ -37,7 +37,7 @@ const HowItWorks = () => {
       hr: "6 hr",
       details: "IMF raises global growth outlook, warns of trade risks",
       top: "top-72 md:top-92",
-      left: "left-2 md:left-30",
+      left: "left-2 md:left-2",
     },
     {
       hr: "7 hr",
@@ -72,18 +72,28 @@ const HowItWorks = () => {
     gsap.set(sections, { opacity: 0, display: "none" });
     gsap.set(".step-1-content", { opacity: 1, display: "block" });
 
+    const scrollDistancePerStep = window.innerHeight * 1.5;
+    const totalScrollDistance = scrollDistancePerStep * totalSteps;
+
+    const snapPoints: number[] = [];
+    for (let i = 0; i < totalSteps; i++) {
+      snapPoints.push(i / (totalSteps - 1));
+    }
+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".hero-gsap",
         start: "top top",
-        end: `+=${totalSteps * 100}`,
-        scrub: 1,
+        end: `+=${totalScrollDistance}`,
+        scrub: 0.5,
         pin: true,
         anticipatePin: 1,
         snap: {
-          snapTo: "labels",
-          duration: { min: 0.3, max: 0.5 },
-          ease: "power1.inOut",
+          snapTo: snapPoints,
+          duration: { min: 0.5, max: 1 },
+          ease: "power2.inOut",
+          delay: 0.2,
+          inertia: false,
         },
       },
       defaults: { ease: "power2.out" },
@@ -92,12 +102,16 @@ const HowItWorks = () => {
     for (let i = 1; i < totalSteps; i++) {
       const current = `.step-${i}-content`;
       const next = `.step-${i + 1}-content`;
+
       tl.addLabel(`step${i}`);
-      tl.to(current, { opacity: 0.3, y: -50, duration: 0.3 });
+
+      tl.to({}, { duration: 0.3 });
+
+      tl.to(current, { opacity: 0.3, y: -50, duration: 0.5 });
       if (next) {
         tl.set(current, { display: "none" });
         tl.set(next, { display: "block", opacity: 0.3, y: 50 });
-        tl.to(next, { opacity: 1, y: 0, duration: 0.3 });
+        tl.to(next, { opacity: 1, y: 0, duration: 0.5 });
       }
     }
 
@@ -106,8 +120,8 @@ const HowItWorks = () => {
     ScrollTrigger.create({
       trigger: ".hero-gsap",
       start: "top top",
-      end: `+=${totalSteps * 100}`,
-      scrub: true,
+      end: `+=${totalScrollDistance}`,
+      scrub: 0.5,
       onUpdate: (self) => {
         const progressPerStep = 1 / (totalSteps - 1);
         const rawIndex = Math.floor(self.progress / progressPerStep) + 1;
@@ -217,7 +231,7 @@ const HowItWorks = () => {
               {news.map((item, index) => (
                 <div
                   key={index}
-                  className={`flex gap-2 ${item.top} ${item.left} bg-white rounded-full other-shadow px-4 z-20 py-1 text-xs items-center absolute ${RubikFont.className}`}
+                  className={`flex gap-2 ${item.top} ${item.left} bg-white rounded-full other-shadow px-4 z-20 py-1 text-xs md:text-sm items-center absolute ${RubikFont.className}`}
                 >
                   <span className="text-[#747474] text-nowrap">{item.hr}</span>
                   <span

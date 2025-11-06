@@ -62,6 +62,7 @@ const events: Event[] = [
 export default function EveryDayIsMinted() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(2);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -87,6 +88,16 @@ export default function EveryDayIsMinted() {
     setCurrentIndex((prev) => (prev === maxIndex ? 0 : prev + 1));
   };
 
+  useEffect(() => {
+    if (isPaused || maxIndex === 0) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev === maxIndex ? 0 : prev + 1));
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [currentIndex, isPaused, maxIndex]);
+
   const visibleEvents = events.slice(currentIndex, currentIndex + itemsPerView);
 
   return (
@@ -108,7 +119,11 @@ export default function EveryDayIsMinted() {
             Once and Forever
           </p>
         </div>
-        <div className="relative mx-2 xl:mx-0 ">
+        <div
+          className="relative mx-2 xl:mx-0"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
           <button
             onClick={handlePrev}
             className="absolute left-8 top-1/2 -translate-y-1/2 -translate-x-12 sm:-translate-x-16 z-10 p-2 bg-[#9BEFE3] rounded-full border-1 border-[#9BEFE3] text-black other-shadow-2 hover:bg-orange-50 transition-colors"
