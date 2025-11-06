@@ -25,25 +25,25 @@ const HowItWorks = () => {
       hr: "5 hr",
       details: "Japan to vote on next prime minister next week",
       top: "top-30",
-      left: "left-22 md:left-1/2",
+      left: "left-14 md:left-1/2",
     },
     {
       hr: "3 hr",
       details: "Xi Jinping meets top officials after call with Trump",
       top: "top-56 md:top-76",
-      left: "left-1/4",
+      left: "left-6 md:left-1/4",
     },
     {
       hr: "6 hr",
       details: "IMF raises global growth outlook, warns of trade risks",
       top: "top-72 md:top-92",
-      left: "left-14 md:left-42",
+      left: "left-2 md:left-30",
     },
     {
       hr: "7 hr",
       details: "Oil outlook: surplus risk and price pressure",
       top: "bottom-18 md:bottom-6",
-      left: "left-6",
+      left: "left-16 md:left-6",
     },
   ];
 
@@ -76,8 +76,8 @@ const HowItWorks = () => {
       scrollTrigger: {
         trigger: ".hero-gsap",
         start: "top top",
-        end: `+=${totalSteps * 150}`,
-        scrub: 0.3,
+        end: `+=${totalSteps * 100}`,
+        scrub: 1,
         pin: true,
         anticipatePin: 1,
         snap: {
@@ -106,7 +106,7 @@ const HowItWorks = () => {
     ScrollTrigger.create({
       trigger: ".hero-gsap",
       start: "top top",
-      end: `+=${totalSteps * 150}`,
+      end: `+=${totalSteps * 100}`,
       scrub: true,
       onUpdate: (self) => {
         const progressPerStep = 1 / (totalSteps - 1);
@@ -217,7 +217,7 @@ const HowItWorks = () => {
               {news.map((item, index) => (
                 <div
                   key={index}
-                  className={`flex gap-2 ${item.top} ${item.left} bg-white rounded-full other-shadow px-4 z-20 py-1 text-[10px] items-center absolute ${RubikFont.className}`}
+                  className={`flex gap-2 ${item.top} ${item.left} bg-white rounded-full other-shadow px-4 z-20 py-1 text-xs items-center absolute ${RubikFont.className}`}
                 >
                   <span className="text-[#747474] text-nowrap">{item.hr}</span>
                   <span

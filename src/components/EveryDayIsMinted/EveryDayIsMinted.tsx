@@ -202,7 +202,7 @@ export default function EveryDayIsMinted() {
       <div className="flex justify-between flex-col md:flex-row items-center  mt-[200px] xl:mt-[280px] gap-8">
         <div
           data-aos="fade-right"
-          className="bg-[#9BEFE3] md:min-h-[400px] lg:min-h-auto rounded-4xl p-6 relative w-full"
+          className="bg-[#9BEFE3] md:min-h-[347px] lg:min-h-[276px] xl:min-h-auto  rounded-4xl p-6 relative w-full"
         >
           <div className="absolute w-[250px] lg:w-auto -top-[150px] lg:-top-[140px] xl:-top-[180px] left-1/2 -translate-x-1/2">
             <Image
@@ -216,13 +216,11 @@ export default function EveryDayIsMinted() {
             className={`text-center text-black mt-4 xl:mt-8 font-normal ${TomorrowFont.className}`}
           >
             <span className="text-[24px] font-medium">FOR ARTIST</span>
-            <h2 className="text-[42px] font-medium leading-11 mt-4 xl:mt-4">
-              Turn
-              <br />
-              Headlines Into Art{" "}
+            <h2 className="text-[32px] font-medium leading-11 mt-2 xl:mt-2">
+              Turn Headlines Into Art{" "}
             </h2>
             <p
-              className={`${RubikFont.className} text-[16px] font-normal my-4`}
+              className={`${RubikFont.className} text-[18px] font-normal my-2`}
             >
               Upload your vision of the day’s event, compete in community
               voting, and earn <br className="hidden 2xl:block" />
@@ -233,7 +231,7 @@ export default function EveryDayIsMinted() {
         </div>
         <div
           data-aos="fade-left"
-          className="bg-[#FF6B5C] rounded-4xl p-6 mt-44 md:mt-0 relative w-full"
+          className="bg-[#FF6B5C] lg:min-h-[276px] xl:min-h-auto rounded-4xl p-6 mt-44 md:mt-0 relative w-full"
         >
           <div className="absolute w-[250px] lg:w-auto -top-[150px] lg:-top-[140px] xl:-top-[180px] left-1/2 -translate-x-1/2">
             <Image
@@ -252,19 +250,16 @@ export default function EveryDayIsMinted() {
               FOR COLLECTOR
             </span>
             <h2
-              className={`text-[42px] font-medium leading-11 mt-4 xl:mt-4 ${TomorrowFont.className}`}
+              className={`text-[32px] font-medium leading-11 mt-2 xl:mt-2 ${TomorrowFont.className}`}
             >
-              Own a
-              <br />
-              Piece of History
+              Own a Piece of History
             </h2>
             <p
-              className={`${RubikFont.className} text-[16px] font-normal my-4`}
+              className={`${RubikFont.className} text-[18px] font-normal my-2`}
             >
               Each NFT is scarce and meaningful. With only 365 per year,
-              collectors secure digital
-              <br className="hidden 2xl:block" /> artifacts with cultural and
-              historical value. Buy, resell, or hold forever.
+              collectors secure digital artifacts with cultural and historical
+              value. Buy, resell, or hold forever.
             </p>
           </div>
         </div>

@@ -1,11 +1,10 @@
 "use client";
-import { Button } from "@/components/ui/button";
 import { RubikFont, TomorrowFont } from "@/lib/font";
-import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import { motion } from "motion/react";
 import ArrowIcon from "@/icons/ArrowIcon";
+import Link from "next/link";
 const Hero = () => {
   const contentMarque = [
     {
@@ -17,39 +16,61 @@ const Hero = () => {
   ];
   return (
     <>
-      <div className="h-[100dvh] flex items-center justify-center bg-[url('/hero/bg.png')] bg-cover bg-center">
-        <div className="flex flex-col justify-between h-full max-h-[60dvh]">
-          <motion.div
-            animate={{
-              y: [0, -20, 0, 20, 0],
-              x: [0, 10, 0, -10, 0],
-              rotate: [0, -10, 0, 10, 0],
-            }}
-            transition={{
-              duration: 20,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "easeInOut",
-            }}
+      <div className="h-[100dvh] flex items-center justify-center relative overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        >
+          <source src="/hero/yt.mp4" type="video/mp4" />
+        </video>
+        <div className="flex flex-col justify-between h-full max-h-[60dvh] relative z-10">
+          <div
+          // animate={{
+          //   y: [0, -20, 0, 20, 0],
+          //   x: [0, 10, 0, -10, 0],
+          //   rotate: [0, -10, 0, 10, 0],
+          // }}
+          // transition={{
+          //   duration: 20,
+          //   repeat: Number.POSITIVE_INFINITY,
+          //   ease: "easeInOut",
+          // }}
           >
-            <Image
+            {/* <Image
               src="/hero/btc.png"
               alt="logo"
               width={170}
               height={170}
               quality={100}
-            />
-          </motion.div>
-          <div className="flex items-center  -mb-40 gap-2 justify-center flex-col">
-            <span
-              className={`text-[18px] text-white font-normal ${RubikFont.className}`}
+            /> */}
+            <h1
+              className={`text-center mt-30 text-6xl font-semibold ${TomorrowFont.className}`}
             >
-              Scroll to explore
-            </span>
-            <ArrowIcon className="w-8 h-8 animate-bounce" />
+              Be the One
+              <br /> who Owns
+              <br /> the Day
+            </h1>
           </div>
+          <Link href="#historically">
+            {" "}
+            <div className="flex items-center  -mb-80 gap-2 justify-center flex-col">
+              <span
+                className={`text-[18px] text-white font-normal ${RubikFont.className}`}
+              >
+                Scroll to explore
+              </span>
+              <ArrowIcon className="w-8 h-8 animate-bounce" />
+            </div>
+          </Link>
         </div>
       </div>
-      <div className="relative overflow-hidden mt-1 md:mt-4 lg:mt-20  rounded-4xl hero-bg-shadow z-10 mx-2 ">
+      <div
+        id="historically"
+        className="scroll-mt-30 relative overflow-hidden mt-1 md:mt-4 lg:mt-20  rounded-4xl hero-bg-shadow z-10 mx-2 "
+      >
         <div className="bg-white rounded-4xl  w-full  xl:min-h-[650px] ">
           <motion.div
             initial={{ y: -80, opacity: 0 }}
@@ -86,7 +107,7 @@ const Hero = () => {
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
-                  className="text-black text-center lg:text-start  space-y-3 lg:pl-8 xl:pl-16"
+                  className="text-black text-center lg:text-start  space-y-3 "
                 >
                   <h1
                     className={`text-5xl md:text-[64px] lg:text-6xl xl:text-[64px] font-medium leading-tight ${TomorrowFont.className}`}
@@ -141,7 +162,7 @@ const Hero = () => {
                 initial={{ y: 400, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
-                className="w-[330px] sm:w-auto"
+                className="w-[800px] md:w-auto other-shadow rounded-[20px]"
               >
                 <Image src="/hero/td2.png" alt="" width={790} height={600} />
               </motion.div>
