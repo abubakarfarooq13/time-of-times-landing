@@ -147,7 +147,7 @@ const EarlyBirdsAirdrop = () => {
             <motion.div
               animate={{
                 x: [0, -30, 0],
-                y: [0, -80, 0],
+                y: [0, -60, 0],
                 rotate: [0, -20, 0],
               }}
               transition={{

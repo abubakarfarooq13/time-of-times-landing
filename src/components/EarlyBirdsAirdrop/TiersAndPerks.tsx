@@ -1,5 +1,6 @@
 import DollarIcon from "@/icons/DollarIcon";
 import { RubikFont } from "@/lib/font";
+import Image from "next/image";
 import React from "react";
 
 const TiersAndPerks = () => {
@@ -11,16 +12,13 @@ const TiersAndPerks = () => {
             data-aos="fade-left"
             className="font-medium text-5xl md:text-[48px] md:leading-14 text-[#221235] text-center lg:text-start"
           >
-            Tiers&nbsp;
-            <br className="hidden lg:block" />
-            and Perks
+            Tiers&nbsp; and Perks
           </h2>
           <p
             data-aos="fade-left"
-            className={`${RubikFont.className} bg-[#FF6B5C] text-sm md:text-[18px] text-black rounded-full text-center -rotate-6 mt-4 max-w-max px-4 py-2`}
+            className={`${RubikFont.className} bg-[#FF4F3A] text-[18px] md:text-3xl text-white rounded-[8px] text-center lg:text-start font-medium  mt-4 max-w-max px-2 py-1`}
           >
-            The more active you are,
-            <br /> the more rewards you get.
+            The more active you are, the more rewards you get.
           </p>
         </div>
         <div className="flex items-center mt-8 lg:mt-0">
@@ -30,9 +28,16 @@ const TiersAndPerks = () => {
             className="text-center"
           >
             <div
-              className={`md:h-30 md:w-30 h-20 w-20 flex items-center justify-center rounded-full bg-[#5D8F88] mb-4`}
+              className={`md:h-30 md:w-30 h-20 w-20 flex items-center justify-center rounded-full  mb-4`}
             >
-              <DollarIcon className="md:h-20 md:w-20 h-16 w-16 text-[#3E605B]" />
+              {/* <DollarIcon className="md:h-20 md:w-20 h-16 w-16 text-[#3E605B]" /> */}
+              <Image
+                src="/earlybirdsairdrop/silver.png"
+                alt="Silver"
+                width={120}
+                height={120}
+                quality={100}
+              />
             </div>
             <span
               className={`${RubikFont.className} text-sm md:text-[18px] text-black `}
@@ -48,7 +53,14 @@ const TiersAndPerks = () => {
             <div
               className={`md:h-30 md:w-30 h-20 w-20 flex items-center justify-center rounded-full bg-[#FF9085] mb-4`}
             >
-              <DollarIcon className="md:h-20 md:w-20 h-16 w-16 text-[#FF4633]" />
+              {/* <DollarIcon className="md:h-20 md:w-20 h-16 w-16 text-[#FF4633]" /> */}
+              <Image
+                src="/earlybirdsairdrop/gold.png"
+                alt="Gold"
+                width={120}
+                height={120}
+                quality={100}
+              />
             </div>
             <span
               className={`${RubikFont.className} text-sm md:text-[16px] text-black `}
@@ -64,7 +76,14 @@ const TiersAndPerks = () => {
             <div
               className={`md:h-30 md:w-30 h-20 w-20 flex items-center justify-center rounded-full bg-[#101817] mb-4`}
             >
-              <DollarIcon className="md:h-20 md:w-20 h-16 w-16 text-[#7CBFB6]" />
+              {/* <DollarIcon className="md:h-20 md:w-20 h-16 w-16 text-[#7CBFB6]" /> */}
+              <Image
+                src="/earlybirdsairdrop/platinum.png"
+                alt="Platinum"
+                width={120}
+                height={120}
+                quality={100}
+              />
             </div>
             <span
               className={`${RubikFont.className} text-sm md:text-[16px] text-black uppercase`}

@@ -53,7 +53,7 @@ export function FeatureCard({
         {title}
       </h3>
       <p
-        className={`text-[18px] text-[#221235] leading-relaxed ${RubikFont.className}`}
+        className={`text-[18px] text-[#221235] leading-5 ${RubikFont.className}`}
       >
         {description}
       </p>

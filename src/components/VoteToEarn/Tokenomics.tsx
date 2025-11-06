@@ -5,6 +5,7 @@ import { DistributionLegend } from "./DistributionLegend";
 import { AntaFont, OutfitFont, RubikFont, TomorrowFont } from "@/lib/font";
 import { Button } from "../ui/button";
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 
 export function Tokenomics() {
   return (
@@ -57,9 +58,17 @@ export function Tokenomics() {
 
             <div
               data-aos="fade-up"
-              className="hidden lg:flex  justify-center w-full lg:absolute  left-10 xl:left-0"
+              className="flex md:hidden ml-8 my-8 md:my-0 md:ml-0 lg:flex  justify-center w-full lg:absolute   left-16 xl:left-14"
             >
-              <PieChart />
+              {/* <PieChart /> */}
+              <Image
+                src="/votetoearn/pie.png"
+                alt="Pie Chart"
+                className="w-auto h-auto lg:w-[350px] xl:w-[420px]"
+                width={420}
+                height={420}
+                quality={100}
+              />
             </div>
 
             <div className="mt-6 md:mt-0">

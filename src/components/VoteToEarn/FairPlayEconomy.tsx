@@ -18,20 +18,18 @@ export function FairPlayEconomy() {
             <div className="lg:col-span-1 flex flex-col justify-center items-center lg:items-start">
               <h3
                 data-aos="fade-left"
-                className={`text-3xl md:text-[48px] lg:text-5xl xl:text-[48px] leading-14 font-medium text-black mb-4 ${TomorrowFont.className}`}
+                className={`text-3xl md:text-[48px] lg:text-5xl xl:text-[48px] leading-14 text-nowrap font-medium text-black mb-4 ${TomorrowFont.className}`}
               >
                 Distribution&nbsp;
-                <br className="hidden lg:block" />
-                Points:
+                <br className="hidden lg:block xl:hidden" /> Points:
               </h3>
               <div
                 data-aos="fade-up"
-                className={`bg-[#FF6B5C] rounded-full px-4 py-3 w-fit md:text-[18px] text-sm ${RubikFont.className} -rotate-6 -mt-3`}
+                className={`bg-[#FF4F3A] rounded-[8px] px-2 py-1 w-fit md:text-[32px] lg:text-[18px] xl:text-[32px] text-[18px] font-medium ${TomorrowFont.className} `}
               >
-                <p className=" text-black text-center font-normal">
-                  Simple, transparent, fair.
-                  <br />
-                  It&apos;s Win-Win-Win.
+                <p className=" text-white  ">
+                  Simple, transparent,
+                  <br /> fair. It&apos;s Win-Win-Win.
                 </p>
               </div>
             </div>
@@ -52,7 +50,7 @@ export function FairPlayEconomy() {
                   To the Artist
                 </p>
                 <p
-                  className={`text-black text-sm  leading-relaxed ${RubikFont.className}`}
+                  className={`text-black text-sm  leading-5 ${RubikFont.className}`}
                 >
                   As a creator, you get rewarded for your artworks
                 </p>
@@ -71,7 +69,7 @@ export function FairPlayEconomy() {
                   To the Voters
                 </p>
                 <p
-                  className={`text-black text-sm  leading-relaxed ${RubikFont.className}`}
+                  className={`text-black text-sm  leading-5 ${RubikFont.className}`}
                 >
                   As someone who votes for the best artworks daily, you earn
                   tokens for successful votes
@@ -91,7 +89,7 @@ export function FairPlayEconomy() {
                   To the DAO Treasury
                 </p>
                 <p
-                  className={`text-black text-sm  leading-relaxed ${RubikFont.className}`}
+                  className={`text-black text-sm  leading-5 ${RubikFont.className}`}
                 >
                   The team and the users have funding for sustainable growth
                 </p>
